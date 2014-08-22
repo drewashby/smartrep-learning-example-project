@@ -1,0 +1,38 @@
+<div class="global">
+<%if(typeof(s.prescribing_information) != "undefined"){%>
+	<section class="popup prescribing_information active">
+		<div class="prescribing_information_container">
+			<div class="scroll_container">
+				<%for(var i=0; i< s.prescribing_information.length; i++){ %>			
+					<%for(var j=0; j< s.prescribing_information[i].img.length; j++){ %>
+						<div class="prescribing_information_page" style="height:<%=s.prescribing_information[i].img[j].height%>;background-image: url('res/img/<%=s.prescribing_information[i].img[j].name%>'); background-repeat: no-repeat;"></div>
+					<%}%> 
+				<%}%> 
+			</div>			
+		</div>
+		<menu>			
+			<div class="prescribing_information_menu">
+				<div class="prescribing_information_menu_scroll_container">
+					<ul class="links">
+						<%for(var i=0;i<slide[0].prescribing_information[0].page.length;i++){ %>
+							<li data-position-x="<%=slide[0].prescribing_information[0].page[i].position_x%>">
+								<div class="page_title"><%=slide[0].prescribing_information[0].page[i].title%></div>
+								<div class="page_nb">Pg. &nbsp;<%=slide[0].prescribing_information[0].page[i].nb%></div>
+								<div class="clear"></div>
+							</li>
+						<%}%>						
+					</ul>
+				</div>
+			</div>
+
+			<div class="title">
+				<h1>Menu</h1>
+				<div class="arrow down"></div>
+			</div>
+		</menu>
+		<div class="close"></div>
+	</section>
+<%}%>
+
+
+</div>

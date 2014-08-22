@@ -1,0 +1,179 @@
+<%if(typeof(s.popup) != "undefined"){ %>
+	<!-- Has a POPUP -->
+	<%for(var i=0;i<s.popup.length;i++){%>
+		<%if(s.popup[i].template=="formulary_tool"){%>
+			<%
+				var curFT = s.popup[i];
+				function inOptions(item){
+					for(var key in curFT.options){ 
+						if(item == key){
+							return curFT.options[key];
+						}
+					}
+					return null;
+				}
+			%> 
+			<!-- spit out the activators -->
+			<%for(var j=0;j<s.popup[i].buttons.length;j++){%>
+				<div class="button_for_popup button_formulary_tool button_for_popup_<%=s.popup[i].name%> button_for_popup_<%=s.popup[i].name%>_<%=j%>" data-class="<%=s.popup[i].name%>" data-popup="#<%=s.popup[i].name%>" <%if(typeof(s.popup[i].pathway_specific)!="undefined"){%>data-pathway-specific="<%=s.popup[i].pathway_specific%>"<%}%> data-grey-background="<%if(typeof(s.popup[i].grey_background) != 'undefined'){%><%=s.popup[i].grey_background%><%}%>"style="<%if(typeof(s.popup[i].pathway_specific)!="undefined"){%>display:none;<%}%><%if(typeof(s.popup[i].buttons[j].background)!="undefined"){%>background-image: url(res/img/<%=s.popup[i].buttons[j].background%>);<%}%>width: <%=s.popup[i].buttons[j].width%>; height: <%=s.popup[i].buttons[j].height%>; top: <%=s.popup[i].buttons[j].top%>; left: <%=s.popup[i].buttons[j].left%>;"></div>
+			<%}%>
+			<!-- POPUP FORMULARY TOOL -->
+			<section class="popup popup_ft <%if(typeof(s.popup[i].class)!="undefined"){%><%=s.popup[i].class%><%}%>" id="<%=s.popup[i].name%>" style="top: <%=s.popup[i].top%>; left: <%=s.popup[i].left%>; width: <%=s.popup[i].width%>; height: <%=s.popup[i].height%>; background-image: url(res/img/<%=s.popup[i].background%>);">
+				<%for(var k=0;k<curFT.drugs.length;k++){ %>
+					<input id="drugid" class="druginfo<% if(k==0){ %> active <%}%>" type="hidden" value="<%=curFT.drugs[k].id%>" data-drugname="<%=curFT.drugs[k].displayName%>" data-urlname="<%=curFT.drugs[k].urlName%>"/>
+				<%}%> 
+				<input id="irepzipcode" type="hidden"/>
+				<div class="close_btn ft_close"></div>
+				<div class="content">
+					<div class="scrollable">
+						<div class="logo <%=curFT.class%>"></div>
+						<div class="content_loader"></div>
+						<h1>Formulary tool</h1>
+						<h2>
+							<span class="uppercase"><%=curFT.drugs[0].displayName%></span> has formulary coverage for <span id="natpol" class="drug_color <%=curFT.class%>"></span> of all insured lives nationwide*
+						</h2>                                                               
+						<div class="ft_action1">                                        
+							<div class="ft_action1_ctrl">												
+								<form id="ft_action1_ctrl" onsubmit="return preventSubmit(event)">
+									<label>Find insurance coverage by ZIP code.</label>
+									<input type="tel" id="ft_zipcode" placeholder="Enter ZIP Code" disabled="true"/>
+								</form>
+								<button class="btn_submit"></button>
+								<div class="clear"></div>
+							</div>                  
+						</div>                                          
+						<div class="errorBox">
+							<div class='required'>To get started, please enter a ZIP code.</div>
+							<div class='invalid'>The ZIP code entered is not valid. Please try again.</div>
+							<div class='internet'>There was a problem accessing the database. Please check your connection and try again.</div>
+							<div class='no_result'>There were no results for that ZIP code. Please try again.</div>
+							<div class='timeout'>The request took too long. Press Submit to retry.</div>
+							<div class='server'>There was a server error. Please try again later.</div>
+						</div>
+						<div class="additional_infos">
+							<p><em>Insured lives</em> is intended to show size of insured population and not imply disease prevalence or appropriate disease</p>
+							<p>population for treatment with <span class="uppercase"><%=curFT.drugs[0].class%></span>.</p>
+						</div>          
+						<div class="ft_result">
+							<p id="results">Results for <span id="ft_result_term"></span></p>
+							<ul class="ft_action2">
+								<li class="ft_cp active" data-tab="cp" data-id='1' data-hptype='1,2,4,9,11,12'></li>
+								<li class="ft_medd ft_mp"  data-tab="mp" data-id='2' data-hptype='5,6,7'></li>
+								<li class="ft_med ft_mc"  data-tab="mc" data-id='3' data-hptype='3,10'></li>
+								<li class="ft_fed ft_fd"  data-tab="fd" data-id='4' data-hptype='8'></li>
+							</ul>
+							<div class="clear"></div>
+							<div class="ft_result_top inactive">
+								<div class="ft_result_left">
+									<label>% of insured lives*</label>
+									<button class="ft_graph" style="display:none !important;"></button>
+									<div class="clear"></div>
+								</div>
+								<div class="ft_result_right">
+								<table>								
+									<tr class="tr_top">
+										<td>
+											<div class="drug_color colcrys drug_name active" style="line-height: 12px;">
+												<%=curFT.drugs[0].displayName%>																
+											</div>								
+										</td>															
+									</tr>
+									<tr class="tr_bottom">																	
+										<td class="drug_color colcrys ft_result_pol main_drug" id="ft_result_<%=curFT.drugs[0].id%>_POL" data-target="drug_0"></td>				
+									</tr>								
+								</table>
+							</div>
+							<div class="clear"></div>
+							</div>
+						</div>				
+						<div class="ft_result_bottom inactive"> 
+							<div class="ft_result_left"></div>
+							<div class="ft_result_right">
+								<%for(var p=0;p<curFT.drugs.length;p++){ %>							
+									<%if(p==0){ %>
+										<table id="ft_result_table_<%=curFT.drugs[p].id%>" class="ft_result_table" data-target="drug_<%=p%>"></table>
+									<%} else { %>
+										<table class="ft_result_table" data-target="drug_<%=p%>"></table>
+									<%}%>
+								<%}%>
+							</div>
+							<div class="clear"></div>
+						</div>						
+						<div class="additional_infos additional_infos2">
+							<p><em>Insured lives</em> is intended to show size of insured population and not imply disease prevalence or appropriate disease</p>
+							<p>population for treatment with <span class="uppercase"><%=curFT.drugs[0].class%></span>.</p>
+						</div> 
+						<div class="ft_isi <%=curFT.class%>">
+						<div class="ft_isi_small">*Source: Fingertip Formulary, accessed <span id="ft_date"></span>. Takeda makes no guarantees for the currency or accuracy of this information.</div>	
+							<!--											
+							<div class="ft_isi_normal">
+								Insured lives are intended to show size of insured population and not imply disease prevalence or appropriate patients for treatment with DEXILANT.
+							</div>	
+							<div class="ft_isi_normal_bold">
+								Comparisons of formulary coverage do not imply comparable safety, efficacy, or FDA-approved indications.
+							</div>
+							<div class="ft_isi_normal_bold">
+								Please click for <span class="underline">Important Safety Information.</span>
+							</div>
+							<div class="ft_isi_normal specialBrand" style="display:none">
+								Brands listed are trademarks of their respective owners.
+							</div>												                        
+							<div class="ft_isi_small">*Source: Fingertip Formulary, <span id="ft_date" style="display:none"></span>December 2013. Takeda makes no guarantees for the currency or accuracy of this information.</div>
+							-->											
+							<%if(typeof(s.popup[i].popup)!="undefined"){%>
+			                    <%for(var j=0;j<s.popup[i].popup.length;j++){%>  
+			                         <div class="button_for_popup button_for_popup_<%=s.popup[i].popup[j].name%> button_for_popup_<%=s.popup[i].popup[j].name%>_<%=j%>" data-class="<%=s.popup[i].popup[j].name%>" data-popup="#<%=s.popup[i].popup[j].name%>" <%if(typeof(s.popup[i].popup[j].pathway_specific)!="undefined"){%>data-pathway-specific="<%=s.popup[i].popup[j].pathway_specific%>"<%}%> data-grey-background="<%if(typeof(s.popup[i].popup[j].grey_background) != 'undefined'){%><%=s.popup[i].popup[j].grey_background%><%}%>" style="width: 214px;height: 40px;bottom: -116px;left: 172px;position:relative;"></div>
+			                    <%}%>
+			                <%}%>
+
+						</div>
+					</div>
+
+				</div>
+			</section>
+			<section class="popup popup_ft_graph">
+				<div class="content">
+					<div class="scrollable">
+						<div class="scrollcontainer">
+							<div class="graphContent threeDrugs">
+								<div class="bars"></div>
+								<div class="labels"></div>
+							</div>			
+							<div class="ft_graph_isi">													
+								<div class="ft_isi_normal">
+									Insured lives are intended to show size of insured population and not imply disease prevalence or appropriate patients for treatment with DEXILANT.
+								</div>	
+								<div class="ft_isi_normal_bold">
+									Comparisons of formulary coverage do not imply comparable safety, efficacy, or FDA-approved indications.
+								</div>
+								<div class="ft_isi_normal_bold">
+									Please click for <span class="underline">Important Safety Information.</span>
+								</div>
+								<div class="ft_isi_normal">
+									Brands listed are trademarks of their respective owners.
+								</div>												                        
+								<div class="ft_isi_small">*Source: Fingertip Formulary, <span id="ft_date" style="display:none"></span>December 2013. Takeda makes no guarantees for the currency or accuracy of this information.</div>
+								<%if(typeof(s.popup[i].popup)!="undefined"){%>
+                                    <%for(var j=0;j<s.popup[i].popup.length;j++){%>
+                                         <div class="button_for_popup button_for_popup_<%=s.popup[i].popup[j].name%> button_for_popup_<%=s.popup[i].popup[j].name%>_<%=j%>" data-class="<%=s.popup[i].popup[j].name%>" data-popup="#<%=s.popup[i].popup[j].name%>" <%if(typeof(s.popup[i].popup[j].pathway_specific)!="undefined"){%>data-pathway-specific="<%=s.popup[i].popup[j].pathway_specific%>"<%}%> data-grey-background="<%if(typeof(s.popup[i].popup[j].grey_background) != 'undefined'){%><%=s.popup[i].popup[j].grey_background%><%}%>" style="width: 214px;height: 40px;bottom: 72px;left: 105px;position:relative;"></div>
+                                    <%}%>
+                                <%}%>		
+							</div>
+						</div>
+					</div>	
+				</div>		
+				<a href="#" class="backbtn"></a>
+				<div class="close_btn"></div>
+			</section>
+			<!-- POPUP FORMULARY TOOL OFFLINE-->
+			<section class="popup popup_ft_offline">              
+				<%if(typeof(s.popup[i].popup)!="undefined"){%>
+				    <%for(var j=0;j<s.popup[i].popup.length;j++){%>
+				         <div class="button_for_popup button_for_popup_<%=s.popup[i].popup[j].name%> button_for_popup_<%=s.popup[i].popup[j].name%>_<%=j%>" data-class="<%=s.popup[i].popup[j].name%>" data-popup="#<%=s.popup[i].popup[j].name%>" <%if(typeof(s.popup[i].popup[j].pathway_specific)!="undefined"){%>data-pathway-specific="<%=s.popup[i].popup[j].pathway_specific%>"<%}%> data-grey-background="<%if(typeof(s.popup[i].popup[j].grey_background) != 'undefined'){%><%=s.popup[i].popup[j].grey_background%><%}%>" style="width: 214px;height: 40px;bottom: -118px;left: 112px;position:relative;"></div>
+				    <%}%>
+				<%}%>
+				<div class="close_btn"></div>               
+			</section>
+		<%}%>
+	<%}%>
+<%}%>

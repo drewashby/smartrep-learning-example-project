@@ -1,0 +1,43 @@
+{
+    "presentation": [
+        {
+            "id": 1,
+            "name": "DEV TEST - Cholecap",
+            "version": "0.001",
+            "bodyclass": "",
+            "slide": [1,2],
+            "pathway": [1],
+            "hotlink":[1,2,103,105],
+            "template":["pathway","bar_bottom","hotlink","repbag","slide_template","popup","opt_in"],
+            "less":["main","pathway","bar_bottom","popup","formulary_tool","repbag","optin"],
+            "js":["jquery","iscroll","hammer","main","pathway","hotlink","clm_library","repbag","popup","formulary_tool","optin"],
+            "repbag_external_id": "",
+            "external_id": "TestPresentation",
+            "back_external_id": "TestPresentation"
+        },
+        {
+            "id": 2,
+            "name": "DEV TEST - CONTRAVE_GLOBAL",
+            "version": "0.001",
+            "bodyclass": "",
+            "slide": [1001,1002, 1003],
+            "template":[],
+            "less":[],
+            "js":["jquery","iscroll","hammer","global","clm_library"],
+            "back_external_id": "TestPresentation"
+        },
+        {
+            "id": 3,
+            "name": "DEV TEST - CONTRAVE_PPT_REPBAG",
+            "version": "0.001",
+            "bodyclass": "",
+            "slide": [201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238],
+            "pathway": [3],
+            "hotlink":[],
+            "template":["pathway","slide_template"],
+            "less":["pathway","slide_template"],
+            "js":["jquery","iscroll","hammer","main","pathway","clm_library"],
+            "back_external_id": "TestPresentation"
+        }
+    ]
+}

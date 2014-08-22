@@ -1,0 +1,148 @@
+.clear{
+	clear:both;
+}
+
+.global{
+	width:1024px;
+	height:768px;
+	// background-color:green;
+	position:absolute;
+	z-index:998;
+	top:0;
+	left:0;
+	background-image: url('../img/fake_bg.png');
+	background-size: contain;
+	.popup{
+		position:relative;
+		margin:70px auto;
+		&.prescribing_information{
+			width:936px;
+			height:609.5px;
+			background-image: url('../img/pi_bg.png');
+			background-size: contain;
+			// border:1px solid #dadada;
+			.prescribing_information_container{
+				width:902px;
+				height:549px;
+				position:relative;
+				margin:41px 11px 0;
+				display:inline-block;
+				// border:1px solid #dadada;
+				overflow: hidden;
+				background-color:#ffffff;
+				.scroll_container{
+					//box-shadow: inset 3px 3px 6px 1px rgba(0,0,0,0.3);
+					.prescribing_information_page{
+						position:relative;
+						background-size: contain;
+					}
+				}
+				.prescribing_information_scrollbarV {
+                                        opacity: 0;
+                                        position:absolute;
+                                        z-index:100;
+                                        width:5px;
+                                        bottom:7px;
+                                        top:40px;
+                                        right: 22px;
+                                        background-color: #ffffff;
+                                        border-radius: 4px;
+                                }
+                                .prescribing_information_scrollbarV > div {
+                                        border-radius: 6px;
+                                        position:absolute;
+                                        z-index:100;
+                                        width:100%;
+                                        background-color: #898989;
+                                }
+			}
+			menu{
+				background-color: #dedfe0;
+				left: 185px;
+				margin: 0;
+				padding: 0;
+				position:absolute;
+				top:17px;
+				left:71px;
+				width: 331px;
+				.title{
+					background-color: #b1b3b6;
+					height: 40px;
+					padding: 0 0 0 0;
+					font-family: 'Avenir-Heavy';
+					font-weight: 600;
+					// border-bottom-right-radius:8px;
+					// border-bottom-left-radius:8px;
+					h1{
+						color: #63656a;
+						font-size: 15px;
+						margin: 0px 0 0 0;
+						text-align:center;
+						text-transform:uppercase;
+						padding-right: 27px;
+						padding-top: 5px;
+						&.open {}
+					}
+					.arrow{
+						background-repeat: no-repeat;
+						background-size: contain;
+						height: 7px;
+						margin: 0 auto;
+						width: 9px;
+						position: absolute;
+						left:151px;
+						bottom: 7px;
+						&.up{
+							background-image: url('../img/pi_menu_arrow_up.png');
+						}
+						&.down{
+							background-image: url('../img/pi_menu_arrow_down.png');
+						}
+					}
+				}
+				.prescribing_information_menu{
+					max-height:320px;
+					overflow: hidden;
+					.prescribing_information_menu_scroll_container{
+
+						.links{
+							font-family: 'Avenir-Heavy';
+							color: #9f9f9f;
+							display:none;
+							font-size: 11px;
+							list-style-type:none;
+							margin: 0;
+							padding: 0;
+							li{
+								border-bottom: 1px dashed #ffffff;
+								padding: 9px 10px;
+								.page_title{
+									float:left;
+									text-transform:uppercase;
+									width: 250px;
+									/*
+									line-height: 1.3em;
+									height: 1.3em;
+									overflow-y: hidden;
+									position: absolute;
+									*/
+								}
+								.page_nb{
+									float:right;
+								}
+							}
+							&.active{
+								display: block;
+							}
+						}
+					}
+				}
+			}
+
+		}
+
+	}
+	.close{width:55px; height:55px; position:absolute; top:0px; right:0px; -webkit-touch-callout: none;  -webkit-user-select: none; -webkit-tap-highlight-color: rgba(0,0,0,0); z-index: 9999;}
+
+
+}

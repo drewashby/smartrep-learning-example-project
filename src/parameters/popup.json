@@ -1,0 +1,1103 @@
+{
+    "popup": [
+        {
+            "id": 1,
+            "name":"important_safety_information",
+            "template":["important_safety_information"],
+            "left": "70px",
+            "top": "90px",
+            "width": "861.5px",
+            "height": "479.5px",
+            "background": "isi.png",
+            "close_btn_style": "width: 54px; height: 54px; z-index: 9999; position: absolute; top: -4px; right: 2px;",
+            "buttons": [
+                {
+                    "left":"628px",
+                    "top":"719px",
+                    "width":"189px",
+                    "height":"40px",
+                    "background": "menu_bottom_isi_btn.png",
+                    "class": "important_safety_information"
+
+                }
+            ],
+            "grey_background": "full",
+            "hotlink":[106,107]
+        },
+        {
+            "id": 2,
+            "name":"opt_in",
+            "template":["opt_in"],
+            "left": "55px",
+            "top": "85px",
+            "width": "936px",
+            "height": "382px",
+            "background": "oi_bg.png",
+            "close_btn_style": "width: 64px; height: 64px; z-index: 9999; position: absolute; top: -15px; right: -15px;",
+            "css": "",
+            "buttons": [
+                {
+                    "left":"303px",
+                    "top":"718px",
+                    "width":"41px",
+                    "height":"40px",
+                    "background": "oi_button.png",
+                    "class": "optin"
+                }
+            ],
+            "grey_background": "full",
+            "popup": [1]
+        },
+        {
+            "id": 3,
+            "name":"references",
+            "from_slide": 2,
+            "template":["popup"],
+            "width": "936px",
+            "height": "150px",
+            "top": "80px",
+            "left": "55px",
+            "background": "references.png",
+            "close_btn_style": "width:35px; height:35px; position: absolute; top: 8px; right: 13px;",
+            "buttons": false,
+            "grey_background": "full"
+        },
+        {
+            "id": 4,
+            "name":"study_design",
+            "active": true,
+            "from_slide": [2,3],
+            "template":["popup"],
+            "width": "500px",
+            "height": "348.5px",
+            "top": "60px",
+            "left": "55px",
+            "background": "study_design_bg.png",
+            "close_btn_style": "width:25px; height:25px; position: absolute; top: 20px; right: 20px;",
+            "buttons": false,
+            "grey_background": "full"
+        },
+        {
+            "id": 5,
+            "name":"flag",
+            "from_slide": 2,
+            "template":["popup"],
+            "left": "167px",
+            "top": "168px",
+            "width": "389.5px",
+            "height": "223.5px",
+            "background": "flag.png",
+            "close_btn_style": "width: 35px; height: 35px; z-index: 9999; position: absolute; top: 8px; right: 15px;",
+            "buttons": [
+                {
+                    "left":"399px",
+                    "top":"316px",
+                    "width":"30px",
+                    "height":"30px",
+                    "background":"flag_btn.png",
+                    "class":"remove_btn"
+                }
+            ],
+            "grey_background": false
+
+        },
+        {
+            "id": 6,
+            "name":"references",
+            "from_slide": [3,103],
+            "template":["popup"],
+            "width": "500px",
+            "height": "273px",
+            "top": "60px",
+            "left": "55px",
+            "background": "references.png",
+            "close_btn_style": "width:35px; height:35px; position: absolute; top: 8px; right: 13px;",
+            "buttons": false,
+            "grey_background": "full"
+        },
+        {
+            "id": 7,
+            "name":"flag",
+            "from_slide": 3,
+            "template":["popup"],
+            "left": "39px",
+            "top": "454px",
+            "width": "630px",
+            "height": "209px",
+            "background": "flag.png",
+            "close_btn_style": "width: 35px; height: 35px; z-index: 9999; position: absolute; top: 8px; right: 15px;",
+            "buttons": [
+                {
+                    "left":"75px",
+                    "top":"431px",
+                    "width":"30px",
+                    "height":"30px",
+                    "background":"flag_btn.png",
+                    "class":"remove_btn"
+                }
+            ],
+            "grey_background": false
+
+        },
+        {
+            "id": 8,
+            "name":"flag_dosing_1",
+            "from_slide": 104,
+            "template":["popup"],
+            "left": "105px",
+            "top": "366px",
+            "width": "389.5px",
+            "height": "205px",
+            "background": "flag_one.png",
+            "close_btn_style": "width: 35px; height: 35px; z-index: 9999; position: absolute; top: 8px; right: 15px;",
+
+
+
+            "buttons": [
+                {
+                    "left":"67px",
+                    "top":"351px",
+                    "width":"30px",
+                    "height":"30px",
+                    "background":"flag_btn.png",
+                    "class":"remove_btn",
+                    "duo_btn": "btn_1"
+                }
+            ],
+            "grey_background": false
+
+        },
+        {
+            "id": 9,
+            "name":"flag_dosing_2",
+            "from_slide": 4,
+            "template":["popup"],
+            "left": "53px",
+            "top": "366px",
+            "width": "474.5px",
+            "height": "214px",
+            "background": "flag_two.png",
+            "close_btn_style": "width: 35px; height: 35px; z-index: 9999; position: absolute; top: 8px; right: 15px;",
+
+            "buttons": [
+                {
+                    "left":"67px",
+                    "top":"351px",
+                    "width":"30px",
+                    "height":"30px",
+                    "background":"flag_btn.png",
+                    "class":"remove_btn",
+                    "duo_btn": "btn_1"
+                }
+            ],
+            "grey_background": false
+
+        },
+        {
+            "id": 10,
+            "name":"prescription",
+            "from_slide": 4,
+            "template":["popup"],
+            "multi_background": false,
+            "width": "443px",
+            "height": "512.5px",
+            "top": "87px",
+            "left": "112px",
+            "background": "rx_acute.png",
+            "close_btn_style": "width:25px; height:25px; position: absolute; top: 34px; right: 47px;",
+            "grey_background": false
+
+        },
+        {
+            "id": 11,
+            "name":"prescription2",
+            "special_class": "prx",
+            "from_slide": 104,
+            "template":["popup"],
+            "multi_background": "multi",
+            "background": [
+                {
+                    "id": 1,
+                    "class":"prx1",
+                    "bg": "rx_prophy_two.png",
+                    "width": "395px",
+                    "height": "452px",
+                    "top": "107px",
+                    "left": "320px",
+                    "z_index": 9000,
+                    "close_btn_class":"prx",
+                    "close_data":"prx1",
+                    "close_btn_style": "width:35px; height:35px; position: absolute; top: 34px; right: 47px;"
+
+                },
+                {
+                    "id": 2,
+                    "class":"prx2",
+                    "bg": "rx_prophy_one.png",
+                    "width": "391px",
+                    "height": "452px",
+                    "top": "66px",
+                    "left": "41px",
+                    "z_index": 9001,
+                    "close_btn_class":"prx",
+                    "close_data":"prx2",
+                    "close_btn_style": "width:35px; height:35px; position: absolute; top: 34px; right: 47px;"
+                }
+            ],
+            "grey_background": false
+        },
+        {
+            "id": 12,
+            "name":"references",
+            "from_slide": 4,
+            "template":["popup"],
+            "width": "514px",
+            "height": "232.5px",
+            "top": "60px",
+            "left": "55px",
+            "background": "references1.png",
+            "close_btn_style": "width:35px; height:35px; position: absolute; top: 8px; right: 13px;",
+            "buttons": false,
+            "grey_background": "full"
+        },
+        {
+            "id": 13,
+            "name":"references",
+            "from_slide": 104,
+            "template":["popup"],
+            "width": "500px",
+            "height": "239.5px",
+            "top": "60px",
+            "left": "55px",
+            "background": "references.png",
+            "close_btn_style": "width:35px; height:35px; position: absolute; top: 8px; right: 13px;",
+            "buttons": false,
+            "grey_background": "full"
+        },
+        {
+            "id": 14,
+            "name":"references",
+            "from_slide": 7,
+            "template":["popup"],
+            "width": "500px",
+            "height": "349.5px",
+            "top": "60px",
+            "left": "55px",
+            "background": "references.png",
+            "close_btn_style": "width:35px; height:35px; position: absolute; top: 8px; right: 13px;",
+            "buttons": false,
+            "grey_background": "full"
+        },
+        {
+            "id": 15,
+            "name":"patient_resources",
+            "from_slide": [601],
+            "template":["popup"],
+            "width": "429.5px",
+            "height": "225px",
+            "top": "242px",
+            "left": "150px",
+            "background": "patient_resource_bg.png",
+            "close_btn_style": "width:25px; height:25px; position: absolute; top: 20px; right: 20px;",
+            "buttons": false,
+            "grey_background": false
+        },
+        {
+            "id": 16,
+            "name":"flag",
+            "from_slide": 601,
+            "template":["popup"],
+            "left": "113px",
+            "top": "216px",
+            "width": "500px",
+            "height": "429.5px",
+            "background": "flag.png",
+            "close_btn_style": "width: 35px; height: 35px; z-index: 9999; position: absolute; top: 8px; right: 15px;",
+            "buttons": [
+                {
+                    "left":"582px",
+                    "top":"607px",
+                    "width":"30px",
+                    "height":"30px",
+                    "background":"flag_btn.png",
+                    "class":"remove_btn"
+                }
+            ],
+            "grey_background": false
+
+        },
+        {
+            "id": 17,
+            "name":"references",
+            "iscroll": "true",
+            "from_slide": 601,
+            "template":["popup"],
+            "width": "422px",
+            "height": "445px",
+            "top": "10px",
+            "left": "10px",
+            "background": "references.png",
+            "close_btn_style": "width:35px; height:35px; position: absolute; top: 8px; right: 13px;",
+            "buttons": false,
+            "grey_background": "full"
+        },
+        {
+            "id": 18,
+            "name":"flag",
+            "from_slide": 602,
+            "template":["popup"],
+            "left": "0px",
+            "top": "90px",
+            "width": "1019px",
+            "height": "617.5px",
+            "background": "flag.png",
+            "close_btn_style": "width: 35px; height: 35px; z-index: 9999; position: absolute; top: 8px; right: 15px;",
+            "buttons": [
+                {
+                    "left":"622px",
+                    "top":"462px",
+                    "width":"25px",
+                    "height":"27px",
+                    "background":"lupa.png",
+                    "class":"remove_btn"
+                }
+            ],
+            "grey_background": "full"
+
+        },
+        {
+            "id": 19,
+            "name":"study_design",
+            "from_slide": [102],
+            "template":["popup"],
+            "width": "500px",
+            "height": "285.5px",
+            "top": "60px",
+            "left": "55px",
+            "background": "study_design_bg.png",
+            "close_btn_style": "width:25px; height:25px; position: absolute; top: 20px; right: 20px;",
+            "buttons": false,
+            "grey_background": "full"
+        },
+        {
+            "id": 20,
+            "name":"flag_treating",
+            "from_slide": 102,
+            "template":["popup"],
+            "left": "103px",
+            "top": "202px",
+            "width": "511px",
+            "height": "375px",
+            "background": "treating_bg.png",
+            "close_btn_style": "width: 35px; height: 35px; z-index: 9999; position: absolute; top: 8px; right: 15px;",
+            "buttons": [
+                {
+                    "left":"67px",
+                    "top":"167px",
+                    "width":"139px",
+                    "height":"33px"
+                 }
+            ],
+            "grey_background": false
+
+        },
+        {
+            "id": 21,
+            "name":"references",
+            "from_slide": 102,
+            "template":["popup"],
+            "width": "539.5px",
+            "height": "378px",
+            "top": "60px",
+            "left": "55px",
+            "background": "references.png",
+            "close_btn_style": "width:35px; height:35px; position: absolute; top: 8px; right: 13px;",
+            "buttons": false,
+            "grey_background": "full"
+        },
+        {
+            "id": 22,
+            "name":"flag",
+            "from_slide": 102,
+            "template":["popup"],
+            "top": "278px",
+            "left": "121px",
+            "width": "418px",
+            "height": "149.5px",
+            "background": "flag.png",
+            "close_btn_style": "width: 35px; height: 35px; z-index: 9999; position: absolute; top: 8px; right: 15px;",
+            "buttons": [
+                {
+                    "left":"508px",
+                    "top":"656px",
+                    "width":"30px",
+                    "height":"30px",
+                    "background":"flag_btn.png",
+                    "class":"remove_btn"
+                }
+            ],
+            "grey_background": false
+
+        },
+        {
+            "id": 23,
+            "name":"flag",
+            "from_slide": 103,
+            "template":["popup"],
+            "left": "39px",
+            "top": "454px",
+            "width": "630px",
+            "height": "209px",
+            "background": "flag.png",
+            "close_btn_style": "width: 35px; height: 35px; z-index: 9999; position: absolute; top: 8px; right: 15px;",
+            "buttons": [
+                {
+                    "left": "53px",
+                    "top": "449px",
+                    "width":"30px",
+                    "height":"30px",
+                    "background":"flag_btn.png",
+                    "class":"remove_btn"
+                }
+            ],
+            "grey_background": false
+
+        },
+        {
+            "id": 24,
+            "name":"references",
+            "from_slide": 107,
+            "template":["popup"],
+            "width": "500px",
+            "height": "313.5px",
+            "top": "60px",
+            "left": "55px",
+            "background": "references.png",
+            "close_btn_style": "width:35px; height:35px; position: absolute; top: 8px; right: 13px;",
+            "buttons": false,
+            "grey_background": "full"
+        },
+        {
+            "id": 25,
+            "name":"popupanimation",
+            "from_slide": [4,104],
+            "template":["popup"],
+            "left": "459px",
+            "top": "20px",
+            "width": "564.5px",
+            "height": "735.5px",
+            "background": "acute_dose_mod.png",
+            "close_btn_style": "width: 35px; height: 35px; z-index: 9999; position: absolute; top: 42px; right: 23px;",
+            "buttons": [
+                {
+                    "left":"67px",
+                    "top":"638px",
+                    "width":"262px",
+                    "height":"52px"
+                }
+            ],
+            "grey_background": false
+
+        },
+        {
+            "id": 26,
+            "name":"references",
+            "iscroll": "true",
+            "from_slide": 602,
+            "template":["popup"],
+            "width": "422px",
+            "height": "548.5px",
+            "top": "10px",
+            "left": "10px",
+            "background": "references.png",
+            "close_btn_style": "width:35px; height:35px; position: absolute; top: 8px; right: 13px;",
+            "buttons": false,
+            "grey_background": "full"
+        },
+        {
+            "id": 27,
+            "name":"study_design",
+            "from_slide": [103],
+            "template":["popup"],
+            "width": "545px",
+            "height": "364px",
+            "top": "60px",
+            "left": "55px",
+            "background": "study_design_bg.png",
+            "close_btn_style": "width:25px; height:25px; position: absolute; top: 20px; right: 20px;",
+            "buttons": false,
+            "grey_background": "full"
+        },
+        {
+            "id": 28,
+            "name":"references",
+            "from_slide": 701,
+            "template":["popup"],
+            "width": "545px",
+            "height": "413.5px",
+            "top": "60px",
+            "left": "55px",
+            "background": "references.png",
+            "close_btn_style": "width:35px; height:35px; position: absolute; top: 8px; right: 13px;",
+            "buttons": false,
+            "grey_background": "full"
+        },
+        {
+            "id": 29,
+            "name":"flag_1",
+            "from_slide": 701,
+            "template":["popup"],
+            "left": "94px",
+            "top": "168px",
+            "width": "264px",
+            "height": "240px",
+            "background": "flag_1.png",
+            "close_btn_style": "width: 35px; height: 35px; z-index: 9999; position: absolute; top: 8px; right: 15px;",
+            "buttons": [
+                {
+                    "left": "208px",
+                    "top": "412px",
+                    "width":"30px",
+                    "height":"30px",
+                    "background":"flag_btn.png",
+                    "class":"remove_btn"
+                }
+            ],
+            "grey_background": false
+
+        },
+        {
+            "id": 30,
+            "name":"flag_2",
+            "from_slide": 701,
+            "template":["popup"],
+            "left": "264px",
+            "top": "347px",
+            "width": "274.5px",
+            "height": "159px",
+            "background": "flag_2.png",
+            "close_btn_style": "width: 35px; height: 35px; z-index: 9999; position: absolute; top: 8px; right: 15px;",
+            "buttons": [
+                {
+                    "left": "278px",
+                    "top": "464px",
+                    "width":"30px",
+                    "height":"30px",
+                    "background":"flag_btn.png",
+                    "class":"remove_btn"
+                }
+            ],
+            "grey_background": false
+
+        },
+        {
+            "id": 31,
+            "name":"patient_resources",
+            "from_slide": [701],
+            "template":["popup"],
+            "width": "492px",
+            "height": "189.5px",
+            "top": "276px",
+            "left": "150px",
+            "background": "patient_resource_bg.png",
+            "close_btn_style": "width:25px; height:25px; position: absolute; top: 20px; right: 20px;",
+            "buttons": false,
+            "grey_background": false
+        },
+        {
+            "id": 32,
+            "name":"references",
+            "from_slide": [1,101,201,301],
+            "template":["popup"],
+            "width": "500px",
+            "height": "254px",
+            "top": "60px",
+            "left": "55px",
+            "background": "references.png",
+            "close_btn_style": "width:35px; height:35px; position: absolute; top: 8px; right: 13px;",
+            "buttons": false,
+            "grey_background": "full"
+        },
+        {
+            "id": 33,
+            "name":"references",
+            "from_slide": 202,
+            "template":["popup"],
+            "width": "500px",
+            "height": "279.5px",
+            "top": "60px",
+            "left": "55px",
+            "background": "references.png",
+            "close_btn_style": "width:35px; height:35px; position: absolute; top: 8px; right: 13px;",
+            "buttons": false,
+            "grey_background": "full"
+        },
+        {
+            "id": 34,
+            "name":"flag_1",
+            "from_slide": 202,
+            "template":["popup"],
+            "left": "168px",
+            "top": "123px",
+            "width": "345.5px",
+            "height": "192.5px",
+            "background": "flag_1.png",
+            "close_btn_style": "width: 35px; height: 35px; z-index: 9999; position: absolute; top: 8px; right: 15px;",
+            "buttons": [
+                {
+                    "left": "416px",
+                    "top": "308px",
+                    "width":"30px",
+                    "height":"30px",
+                    "background":"flag_btn.png",
+                    "class":"remove_btn"
+                }
+            ],
+            "grey_background": false
+
+        },
+        {
+            "id": 35,
+            "name":"flag_2",
+            "from_slide": 202,
+            "template":["popup"],
+            "left": "109px",
+            "top": "142px",
+            "width": "363px",
+            "height": "172.5px",
+            "background": "flag_2.png",
+            "close_btn_style": "width: 35px; height: 35px; z-index: 9999; position: absolute; top: 8px; right: 15px;",
+            "buttons": [
+                {
+                    "left": "575px",
+                    "top": "213px",
+                    "width":"30px",
+                    "height":"30px",
+                    "background":"flag_btn.png",
+                    "class":"remove_btn"
+                }
+            ],
+            "grey_background": false
+
+        },
+        {
+            "id": 36,
+            "name":"references",
+            "from_slide": 203,
+            "template":["popup"],
+            "width": "500px",
+            "height": "173px",
+            "top": "60px",
+            "left": "55px",
+            "background": "references.png",
+            "close_btn_style": "width:35px; height:35px; position: absolute; top: 8px; right: 13px;",
+            "buttons": false,
+            "grey_background": "full"
+        },
+        {
+            "id": 37,
+            "name":"prescription2",
+            "special_class": "prx",
+            "from_slide": 204,
+            "template":["popup"],
+            "multi_background": "multi",
+            "background": [
+                {
+                    "id": 1,
+                    "class":"prx2",
+                    "bg": "flag_2.png",
+                    "width": "380px",
+                    "height": "428px",
+                    "top": "296px",
+                    "left": "327px",
+                    "z_index": 9000,
+                    "close_btn_class":"prx",
+                    "close_data":"prx2",
+                    "close_btn_style": "width:35px; height:35px; position: absolute; top: 34px; right: 47px;"
+
+                },
+                {
+                    "id": 2,
+                    "class":"prx1",
+                    "bg": "flag_1.png",
+                    "width": "382px",
+                    "height": "436.5px",
+                    "top": "100px",
+                    "left": "40px",
+                    "z_index": 9001,
+                    "close_btn_class":"prx",
+                    "close_data":"prx1",
+                    "close_btn_style": "width:35px; height:35px; position: absolute; top: 34px; right: 47px;"
+                }
+            ],
+            "grey_background": false
+        },
+        {
+            "id": 38,
+            "name":"references",
+            "from_slide": 204,
+            "template":["popup"],
+            "width": "500px",
+            "height": "243px",
+            "top": "60px",
+            "left": "55px",
+            "background": "references.png",
+            "close_btn_style": "width:35px; height:35px; position: absolute; top: 8px; right: 13px;",
+            "buttons": false,
+            "grey_background": "full"
+        },
+        {
+            "id": 39,
+            "name":"references",
+            "from_slide": 206,
+            "template":["popup"],
+            "width": "500px",
+            "height": "272.5px",
+            "top": "60px",
+            "left": "55px",
+            "background": "references.png",
+            "close_btn_style": "width:35px; height:35px; position: absolute; top: 8px; right: 13px;",
+            "buttons": false,
+            "grey_background": "full"
+        },
+        {
+            "id": 40,
+            "name":"references",
+            "from_slide": 303,
+            "template":["popup"],
+            "width": "500px",
+            "height": "159px",
+            "top": "60px",
+            "left": "55px",
+            "background": "references.png",
+            "close_btn_style": "width:35px; height:35px; position: absolute; top: 8px; right: 13px;",
+            "buttons": false,
+            "grey_background": "full"
+        },
+        {
+            "id": 41,
+            "name":"flag_1",
+            "from_slide": 203,
+            "template":["popup"],
+            "left": "168px",
+            "top": "221px",
+            "width": "345.5px",
+            "height": "192.5px",
+            "background": "flag_1.png",
+            "close_btn_style": "width: 35px; height: 35px; z-index: 9999; position: absolute; top: 8px; right: 15px;",
+            "buttons": [
+                {
+                    "left": "419px",
+                    "top": "410px",
+                    "width":"30px",
+                    "height":"30px",
+                    "background":"flag_btn.png",
+                    "class":"remove_btn"
+                }
+            ],
+            "grey_background": false
+
+        },
+        {
+            "id": 42,
+            "name":"flag_2",
+            "from_slide": 203,
+            "template":["popup"],
+            "left": "109px",
+            "top": "311px",
+            "width": "363px",
+            "height": "172.5px",
+            "background": "flag_2.png",
+            "close_btn_style": "width: 35px; height: 35px; z-index: 9999; position: absolute; top: 8px; right: 15px;",
+            "buttons": [
+                {
+                    "left": "575px",
+                    "top": "236px",
+                    "width":"30px",
+                    "height":"30px",
+                    "background":"flag_btn.png",
+                    "class":"remove_btn"
+                }
+            ],
+            "grey_background": false
+
+        },
+        {
+            "id": 43,
+            "name":"references",
+            "from_slide": 303,
+            "template":["popup"],
+            "width": "500px",
+            "height": "159px",
+            "top": "60px",
+            "left": "55px",
+            "background": "references.png",
+            "close_btn_style": "width:35px; height:35px; position: absolute; top: 8px; right: 13px;",
+            "buttons": false,
+            "grey_background": "full"
+        },
+        {
+            "id": 44,
+            "name":"references",
+            "from_slide": 802,
+            "template":["popup"],
+            "width": "500px",
+            "height": "512.5px",
+            "top": "60px",
+            "left": "55px",
+            "background": "references.png",
+            "close_btn_style": "width:35px; height:35px; position: absolute; top: 8px; right: 13px;",
+            "buttons": false,
+            "grey_background": "full"
+        },
+        {
+            "id": 45,
+            "name":"flag",
+            "from_slide": 803,
+            "template":["popup"],
+            "left": "150px",
+            "top": "247px",
+            "width": "429.5px",
+            "height": "225px",
+            "background": "flag.png",
+            "close_btn_style": "width: 35px; height: 35px; z-index: 9999; position: absolute; top: 8px; right: 15px;",
+            "buttons": [
+                {
+                    "left": "69px",
+                    "top": "564px",
+                    "width":"182px",
+                    "height":"30px"
+                }
+            ],
+            "grey_background": false
+
+        },
+        {
+            "id": 46,
+            "name":"references",
+            "iscroll": "true",
+            "from_slide": 801,
+            "template":["popup"],
+            "width": "422.5px",
+            "height": "520px",
+            "top": "10px",
+            "left": "10px",
+            "background": "references.png",
+            "close_btn_style": "width:35px; height:35px; position: absolute; top: 8px; right: 13px;",
+            "buttons": false,
+            "grey_background": "full"
+        },
+        {
+            "id": 47,
+            "name":"popupanimation",
+            "from_slide": [104],
+            "template":["popup"],
+            "left": "459px",
+            "top": "20px",
+            "width": "564px",
+            "height": "735.5px",
+            "background": "acute_dose_mod.png",
+            "close_btn_style": "width: 35px; height: 35px; z-index: 9999; position: absolute; top: 42px; right: 23px;",
+            "buttons": [
+                {
+                    "left":"67px",
+                    "top":"638px",
+                    "width":"262px",
+                    "height":"52px"
+                }
+            ],
+            "grey_background": false
+
+        },
+        {
+            "id": 48,
+            "name":"popupanimation",
+            "from_slide": 202,
+            "template":["popup"],
+            "width": "500px",
+            "height": "279.5px",
+            "top": "60px",
+            "left": "55px",
+            "background": "references.png",
+            "close_btn_style": "width:35px; height:35px; position: absolute; top: 8px; right: 13px;",
+            "buttons": [
+                {
+                    "left":"260px",
+                    "top":"719px",
+                    "width":"40px",
+                    "height":"40px",
+                    "background":""
+                }
+            ],
+            "grey_background": "full"
+        },
+        {
+            "id": 49,
+            "name":"references",
+            "from_slide": 803,
+            "template":["popup"],
+            "width": "500px",
+            "height": "263px",
+            "top": "55px",
+            "left": "55px",
+            "background": "references.png",
+            "close_btn_style": "width:35px; height:35px; position: absolute; top: 8px; right: 13px;",
+            "buttons": false,
+            "grey_background": "full"
+        },
+        {
+            "id": 50,
+            "name":"references",
+            "from_slide": 303,
+            "template":["popup"],
+            "width": "500px",
+            "height": "202px",
+            "top": "60px",
+            "left": "55px",
+            "background": "references.png",
+            "close_btn_style": "width:35px; height:35px; position: absolute; top: 8px; right: 13px;",
+            "buttons": false,
+            "grey_background": "full"
+        },
+        {
+            "id": 51,
+            "name":"prescription2",
+            "special_class": "prx",
+            "from_slide": 204,
+            "template":["popup"],
+            "multi_background": "multi",
+            "background": [
+                {
+                    "id": 1,
+                    "class":"prx2",
+                    "bg": "flag_2.png",
+                    "width": "382px",
+                    "height": "436.5px",
+                    "top": "283px",
+                    "left": "327px",
+                    "z_index": 9000,
+                    "close_btn_class":"prx",
+                    "close_data":"prx2",
+                    "close_btn_style": "width:35px; height:35px; position: absolute; top: 34px; right: 47px;"
+
+                },
+                {
+                    "id": 2,
+                    "class":"prx1",
+                    "bg": "flag_1.png",
+                    "width": "391px",
+                    "height": "452px",
+                    "top": "88px",
+                    "left": "37px",
+                    "z_index": 9001,
+                    "close_btn_class":"prx",
+                    "close_data":"prx1",
+                    "close_btn_style": "width:35px; height:35px; position: absolute; top: 34px; right: 47px;"
+                }
+            ],
+            "grey_background": false
+        },
+        {
+            "id": 52,
+            "name":"references",
+            "from_slide": 206,
+            "template":["popup"],
+            "width": "500px",
+            "height": "347.5px",
+            "top": "60px",
+            "left": "55px",
+            "background": "references.png",
+            "close_btn_style": "width:35px; height:35px; position: absolute; top: 8px; right: 13px;",
+            "buttons": false,
+            "grey_background": "full"
+        },
+        {
+            "id": 101,
+            "name":"formulary_tool",
+            "template":["formulary_tool"],
+            "left": "56px",
+            "top": "49px",
+            "width": "915px",
+            "height": "650px",
+            "background": "",
+            "close_btn_style": "width: 54px; height: 54px; z-index: 9999; position: absolute; top: -15px; right: -15px; background-image:url('res/img/close_btn.png'); background-size: cover;",            "css": "",
+            "buttons": [
+                {
+                    "left":"211px",
+                    "top":"718px",
+                    "width":"41px",
+                    "height":"40px",
+                    "class": "formulary_tool"
+                }
+            ],
+            "grey_background": "full",
+            "drugs": [
+                {
+                    "class": "colcrys",
+                    "displayName": "COLCRYS&nbsp;<div class='medical_name'>(colchicine, <span style='text-transform: uppercase !important;'>USP</span>)</div>",
+                    "urlName": "colcrys",
+                    "id": "2516"
+                }
+            ],
+            "popup": [1]
+
+        },
+
+        {
+            "id": 103,
+            "name":"important_safety_information",
+            "template":["important_safety_information"],
+            "left": "60px",
+            "top": "43px",
+            "width": "930.5px",
+            "height": "665.5px",
+            "background": "isi.png",
+            "close_btn_style": "width: 54px; height: 54px; z-index: 9999; position: absolute; top: -4px; right: 2px;",
+            "buttons": [
+                {
+                    "left":"628px",
+                    "top":"719px",
+                    "width":"189px",
+                    "height":"40px",
+                    "background": "menu_bottom_isi_btn.png",
+                    "class": "important_safety_information"
+
+                }
+            ],
+            "grey_background": "full",
+            "hotlink":[46],
+            "popup": [5]
+        },
+        {
+            "id": 104,
+            "name":"formulary_tool",
+            "template":["formulary_tool"],
+            "left": "56px",
+            "top": "49px",
+            "width": "915px",
+            "height": "650px",
+            "background": "",
+            "close_btn_style": "width: 54px; height: 54px; z-index: 9999; position: absolute; top: -15px; right: -15px; background-image:url('res/img/close_btn.png'); background-size: cover;",            "css": "",
+            "buttons": [
+                {
+                    "left":"211px",
+                    "top":"718px",
+                    "width":"41px",
+                    "height":"40px",
+                    "class": "formulary_tool"
+                }
+            ],
+            "grey_background": "full",
+            "drugs": [
+                {
+                    "class": "uloric",
+                    "displayName": "ULORIC&nbsp;<div class='medical_name'>(febuxostat)</div>",
+                    "urlName": "uloric",
+                    "id": "2354"
+                }
+            ],
+            "popup": [1]
+
+        }
+    ]
+}

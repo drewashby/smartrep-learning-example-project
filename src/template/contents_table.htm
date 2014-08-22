@@ -1,0 +1,30 @@
+<section class="contents_table">
+	<div class="contents_table_container">
+		<%if(typeof(pathway) != "undefined"){ %>			
+			<%for(var i=0;i<pathway.length;i++){ %>	
+				<article class="contents_table_pathway contents_table_pathway_<%=pathway[i].id%>">
+					
+					<%if(pathway[i].content_table_show_slide==true){ %>	
+						<header>
+							<h2><%=pathway[i].name%></h2>
+						</header>
+						<ul>
+						<%for(var j=0;j<pathway[i].slide.length;j++){ %>
+							<%if(s.id==pathway[i].slide[j].id){%>
+								<li class="active"><a data-href="veeva:gotoSlide(<%=name%>_<%=pathway[i].slide[j].name%>.zip)"><%=pathway[i].slide[j].description%></a></li>
+							<%}else{%>
+								<li><a data-href="veeva:gotoSlide(<%=name%>_<%=pathway[i].slide[j].name%>.zip)"><%=pathway[i].slide[j].description%></a></li>						
+							<%}%>
+						<%}%>
+						</ul>
+					<%}else{%>
+						<header>
+							<h2><a data-href="veeva:gotoSlide(<%=name%>_<%=pathway[i].slide[0].name%>.zip)"><%=pathway[i].name%></a></h2>
+						</header>	
+					<%}%>	
+				</article>
+			<%}%>
+		<%}%>		
+	</div>
+	<footer></footer>	
+</section>

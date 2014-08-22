@@ -1,0 +1,80 @@
+<%if(typeof(s.hotlink) != "undefined"){ %>	
+	<section class="hotlinks">
+	<%for(var i=0;i<s.hotlink.length;i++){%>
+		<%var isActive = false%>
+		<div id="hotlink_<%=s.hotlink[i].id%>" 
+			 <%if(typeof(s.hotlink[i].isActiveFor) != "undefined" ){ %>
+			 	<%for(var j=0;j<s.hotlink[i].isActiveFor.length;j++){ %>
+			 		<%if(s.hotlink[i].isActiveFor[j]==s.id){%>
+			 			<%isActive = true%>
+			 		<%}%>
+			 	<%}%>			 	
+			 <%}%>
+			 <%if(isActive){%>
+			 	class="hotlink <%if(typeof(s.hotlink[i].class) != "undefined" ){ %><%=s.hotlink[i].class%><%}%> active"
+			 <%}else{%>	
+			 	class="hotlink <%if(typeof(s.hotlink[i].class) != "undefined" ){ %><%=s.hotlink[i].class%><%}%>"
+			 <%}%>			
+			<%if(typeof(s.hotlink[i].presentation)!="undefined"){%>
+                    data-link="<%=s.hotlink[i].presentation[0].name%>_<%=s.hotlink[i].slide[0].name%>.zip"                                                                 
+                    data-presentation="<%=s.hotlink[i].presentation[0].back_external_id%>"
+            <%}else{%>
+                    data-link="<%=name%>_<%=s.hotlink[i].slide[0].name%>.zip"         
+            <%}%>
+			<%if(typeof(s.hotlink[i].setpathway) != "undefined"){ %>		
+				data-setpathway="<%=s.hotlink[i].setpathway%>"
+			<%}%> 
+			<%if(typeof(s.hotlink[i].previous_slide) != "undefined"){ %>		
+				data-previous-slide="true"
+			<%}%> 
+			<%if(typeof(s.hotlink[i].previous_slide) != "undefined"){ %>		
+				data-previous-slide="true"
+			<%}%> 
+			<%if(typeof(s.hotlink[i].store_patient) !="undefined"){ %>		
+				data-patient="<%=s.hotlink[i].store_patient%>"
+			<%}%>
+			style="width:<%=s.hotlink[i].width%>;height:<%=s.hotlink[i].height%>;top:<%=s.hotlink[i].top%>;left:<%=s.hotlink[i].left%>;position:absolute;z-index:1;<%if(typeof(s.hotlink[i].css) != 'undefined'){ %><%=s.hotlink[i].css%>;<%}%><%if(typeof(s.hotlink[i].z_index) != 'undefined'){ %>z-index:<%=s.hotlink[i].z_index%><%}%>;">
+		<%if(typeof(s.hotlink[i].show_name) != "undefined" && s.hotlink[i].show_name==true){ %>		
+			<%=s.hotlink[i].name%>
+		<%}%>
+		</div>
+	<%}%>
+	</section>  
+<%}%> 
+<%if(typeof(hotlink) != "undefined"){ %>	
+	<section class="hotlinks">
+	<%for(var i=0;i<hotlink.length;i++){%>
+		<%var isActive = false%>
+		<div id="hotlink_<%=hotlink[i].id%>" 
+			<%if(typeof(hotlink[i].isActiveFor) != "undefined" ){ %>
+			 	<%for(var j=0;j<hotlink[i].isActiveFor.length;j++){ %>
+			 		<%if(hotlink[i].isActiveFor[j]==s.id){%>
+			 			<%isActive = true%>
+			 		<%}%>
+			 	<%}%>			 	
+			 <%}%>
+			 <%if(isActive){%>
+			 	class="hotlink <%if(typeof(hotlink[i].class) != "undefined" ){ %><%=hotlink[i].class%><%}%> active"
+			 <%}else{%>	
+			 	class="hotlink <%if(typeof(hotlink[i].class) != "undefined" ){ %><%=hotlink[i].class%><%}%>"
+			 <%}%>
+			<%if(typeof(hotlink[i].presentation)!="undefined"){%>
+                    data-link="<%=hotlink[i].presentation[0].name%>_<%=hotlink[i].slide[0].name%>.zip"                                                                 
+                    data-presentation="<%=hotlink[i].presentation[0].back_external_id%>" 
+            <%}else{%>
+                    data-link="<%=name%>_<%=hotlink[i].slide[0].name%>.zip"
+            <%}%> 
+			<%if(typeof(hotlink[i].setpathway) != "undefined"){ %>		
+				data-setpathway="<%=hotlink[i].setpathway%>"
+			<%}%> 
+			<%if(typeof(hotlink[i].previous_slide) != "undefined"){ %>		
+				data-previous-slide="true"
+			<%}%>	
+			style="width:<%=hotlink[i].width%>;height:<%=hotlink[i].height%>;top:<%=hotlink[i].top%>;left:<%=hotlink[i].left%>;position:absolute;z-index:1;<%if(typeof(hotlink[i].css) != 'undefined'){ %><%=hotlink[i].css%>;<%}%>">
+		<%if(typeof(hotlink[i].show_name) != "undefined" && hotlink[i].show_name==true){ %>		
+			<%=hotlink[i].name%>
+		<%}%>
+		</div>
+	<%}%>
+	</section>  
+<%}%>  

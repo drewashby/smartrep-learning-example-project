@@ -1,0 +1,163 @@
+{
+    "prescribing_information": [
+         {
+            "id": 1,
+            "name": "Contrave pi",
+            "height": "25234px",
+            "link": "GLOBAL_PI",
+            "img": [
+                {
+                    "name": "page_1.png",
+                    "height": "1147px"
+                },
+                {
+                    "name": "page_2.png",
+                    "height": "1147px"
+                },
+                {
+                    "name": "page_3.png",
+                    "height": "1147px"
+                },
+                {
+                    "name": "page_4.png",
+                    "height": "1147px"
+                },
+                {
+                    "name": "page_5.png",
+                    "height": "1147px"
+                },
+                {
+                    "name": "page_6.png",
+                    "height": "1147px"
+                },
+                {
+                    "name": "page_7.png",
+                    "height": "1147px"
+                },
+                {
+                    "name": "page_8.png",
+                    "height": "1147px"
+                },
+                {
+                    "name": "page_9.png",
+                    "height": "1147px"
+                },
+                {
+                    "name": "page_10.png",
+                    "height": "1147px"
+                },
+                {
+                    "name": "page_11.png",
+                    "height": "1147px"
+                },
+                {
+                    "name": "page_12.png",
+                    "height": "1147px"
+                },
+                {
+                    "name": "page_13.png",
+                    "height": "1147px"
+                },
+                {
+                    "name": "page_14.png",
+                    "height": "1147px"
+                },
+                {
+                    "name": "page_15.png",
+                    "height": "1147px"
+                },
+                {
+                    "name": "page_16.png",
+                    "height": "1147px"
+                }
+            ],
+            "page": [
+                {
+                    "title" : "HIGHLIGHTS OF PRESCRIBING INFORMATION",
+                    "nb" : "1",
+                    "position_x" : "0"
+                },
+                {
+                    "title" : "INDICATIONS AND USAGE",
+                    "nb" : "2",
+                    "position_x" : "1214"
+                },
+                {
+                    "title" : "DOSAGE AND ADMINISTRATION",
+                    "nb" : "2",
+                    "position_x" : "1417"
+                },
+                {
+                    "title" : "DOSAGE FORMS AND STRENGTHS",
+                    "nb" : "3",
+                    "position_x" : "2592"
+                },
+                {
+                    "title" : "CONTRAINDICATIONS",
+                    "nb" : "3",
+                    "position_x" : "2676"
+                },
+                {
+                    "title" : "WARNINGS AND PRECAUTIONS",
+                    "nb" : "3",
+                    "position_x" : "2772"
+                },
+                {
+                    "title" : "ADVERSE REACTIONS",
+                    "nb" : "4",
+                    "position_x" : "3546"
+                },
+                {
+                    "title" : "DRUG INTERACTIONS",
+                    "nb" : "6",
+                    "position_x" : "5870"
+                },
+                {
+                    "title" : "USE IN SPECIFIC POPULATIONS",
+                    "nb" : "6",
+                    "position_x" : "6475"
+                },
+                {
+                    "title" : "OVERDOSAGE",
+                    "nb" : "7",
+                    "position_x" : "7426"
+                },
+                {
+                    "title" : "DESCRIPTION",
+                    "nb" : "7",
+                    "position_x" : "7576"
+                },
+                {
+                    "title" : "CLINICAL PHARMACOLOGY",
+                    "nb" : "8",
+                    "position_x" : "8289"
+                },
+                {
+                    "title" : "NONCLINICAL TOXICOLOGY",
+                    "nb" : "11",
+                    "position_x" : "12415"
+                },
+                {
+                    "title" : "CLINICAL STUDIES",
+                    "nb" : "12",
+                    "position_x" : "13435"
+                },
+                {
+                    "title" : "HOW SUPPLIED/STORAGE AND HANDLING",
+                    "nb" : "15",
+                    "position_x" : "16429"
+                },
+                {
+                    "title" : "PATIENT COUNSELING INFORMATION",
+                    "nb" : "15",
+                    "position_x" : "16921"
+                },
+                {
+                    "title" : "MEDICATION GUIDE",
+                    "nb" : "17",
+                    "position_x" : "18402"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,130 @@
+
+.popup.optin_popup{
+	/*border-radius: 6px;
+	background: #fdfdfd;
+	border: 3px solid #fff;
+	box-shadow: 3px 3px 12px 3px rgba(0, 0, 0, 0.3);*/
+	background-size: contain;
+	.content{
+		/*border-radius: 5px;
+		box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.3);*/
+		width: 100%;
+		height: 390px;
+		#opt_in_form_div {
+			width: 682px;
+			height: 72px;
+			position: absolute;
+			top: 186px;
+			left: 10px;
+			.optin {
+				.emailField{
+					width: 320px;
+					height: 35px;
+					border:0;
+					color: #b9b9b9;
+					font-size: 14px;
+					padding: 0;
+					padding-left: 10px;
+					-webkit-appearance: none;
+					border-radius: 5px;
+					border-bottom: 1px solid #b9b9b9;
+					border-left: 1px solid #b9b9b9;
+					border-right: 1px solid #b9b9b9;
+					border-top: 1px solid #b9b9b9;
+					background: transparent;
+					outline: none;
+					position: relative;
+					top: 0px;
+					left:15px;
+					/*&.errorBox{
+						border-top: 2px solid red;
+
+					}*/
+				}
+				.emailSubmit{
+					width: 89.5px;
+					height: 37.5px;
+					background: url('../img/oi_submit.png');
+					background-size:cover;
+					border:none;
+					margin-left: 40px;
+					margin-top:17px;
+					text-indent: -10000px;
+					border:none;
+					outline:none;
+				}
+			}
+
+			.validBox{
+				display: none;
+				top: 68px;
+				left: 15px;
+				position: absolute;
+				height: 35.5px;
+				width: 270px;
+				font-family: "Arial";
+				.img{
+					background-image:url(../img/optin-result.png);
+					background-size:38px 76px;
+					background-position:0px 0px;
+					background-repeat:no-repeat;
+					float: left;
+					height:38px;
+					width: 38px;
+					margin: 0 10px 10px 0;
+				}
+				.text{
+					float: left;
+					font-size: 12px;
+					height:40px;
+					width: 222px;
+					>span{
+						display:none;
+					}
+				}
+				&.incorrect span.incorrect{
+					display:block;
+				}
+				&.required span.required{
+					margin-top: 8px;
+					display:block;
+				}
+				&.connection span.connection{
+					margin-top: -6px;
+					display:block;
+				}
+				&.unlinked span.unlinked{
+					display:block;
+				}
+				&.successBox{
+					background-image: url('../img/pi/check.png');
+					background-repeat: no-repeat;
+					background-size: 34px 28px;
+					.text{
+						color: black;
+						width: 222px;
+						margin-top: 3px;
+					}
+				}
+				&.errorBox{
+					/*background-image: url('../img/dex_optin_error.png');*/
+					background-repeat: no-repeat;
+					background-size: cover;
+					.img{
+						background-position:0px -38px;
+						float: left;
+					}
+					.text{
+						padding-top: 3px;
+						color: red;
+						width: 222px;
+						float: left;
+					}
+				}
+				&.active{
+					display: block;
+				}
+			}
+		}
+	}
+}

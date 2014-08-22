@@ -1,0 +1,167 @@
+.button_for_popup {
+	position: absolute;
+	background-size: cover;
+	&.button_for_popup_important_safety_information_0{
+		&.active{
+			background-position-y: -40px;
+		}
+	}
+	&.button_for_popup_references{
+		-webkit-transition: -webkit-transform 300ms ease-out;
+		background-repeat: no-repeat;
+		background-size: cover !important;
+		&.button_for_popup_references{
+			background-position: 0 0px;
+
+		}
+
+		&.active{
+			background-position: 0 -39px !important;;
+		}
+	}
+	&.button_for_popup_references2{
+		-webkit-transition: -webkit-transform 300ms ease-out;
+		background-repeat: no-repeat;
+
+		&.button_for_popup_references2{
+			background-position: 0 0px;
+
+		}
+
+		&.active{
+			background-position: 0 -39px !important;;
+		}
+	}
+	&.button_for_popup_opt_in{
+		z-index:2;
+		-webkit-transition: -webkit-transform 300ms ease-out;
+		background-repeat: no-repeat;
+		&.active{
+			background-position: 0 -40px !important;;
+		}
+
+	}
+	&.button_for_popup_study_design{
+		-webkit-transition: -webkit-transform 300ms ease-out;
+		background-repeat: no-repeat;
+
+		&.button_for_popup_study_design{
+			background-position: 0 -34px !important;
+		}
+		&.active{
+			background-position: 0 -68px  !important;;
+		}
+	}
+	&.button_for_popup_patient_resources{
+		-webkit-transition: -webkit-transform 300ms ease-out;
+		background-repeat: no-repeat;
+
+		&.button_for_popup_patient_resources{
+			background-position: 0 -32px !important;
+		}
+		&.active{
+			background-position: 0 -66px  !important;;
+		}
+	}
+	&.button_for_popup_prescription{
+		-webkit-transition: -webkit-transform 300ms ease-out;
+		background-repeat: no-repeat;
+
+		&.button_for_popup_prescription{
+			background-position: 0 -33px !important;
+		}
+		&.active{
+			background-position: 0 -68px  !important;;
+		}
+	}
+	&.button_for_popup_prescription2{
+		-webkit-transition: -webkit-transform 300ms ease-out;
+		background-repeat: no-repeat;
+
+		&.button_for_popup_prescription2{
+			background-position: 0 -34px !important;
+		}
+		&.active{
+			background-position: 0 -68px  !important;;
+		}
+	}
+	/*&.button_for_popup_formulary_tool:not(.button_for_popup_formulary_tool_2):not(.button_for_popup_formulary_tool_3){
+		-webkit-transition: -webkit-transform 300ms ease-out;
+		background-repeat: no-repeat;
+
+		&.button_for_popup_formulary_tool_0{
+			background-size: 22px 22px;
+			background-position: 77% center;
+			-webkit-transform-origin: 60% center;
+		}
+		&.button_for_popup_formulary_tool_1{
+			background-size: 89px 14px;
+			/*background-position: 14px 25px;*/
+		/*	-webkit-transform-origin: 39% 57%;
+		}
+		&.active{
+			-webkit-transform:scale(1.2,1.2);
+		}*/
+	/*}*/
+	&.button_for_popup_formulary_tool{
+		background-image: url(../img/ft_button.png);
+		left: 210px;
+		bottom:10px;
+		background-position: 0 0px;
+		background-repeat: no-repeat;
+
+		&.active{
+			background-position: 0 -40px !important;
+
+		}
+
+	}
+}
+
+
+.popup {
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-transition: opacity 300ms linear 50ms, z-index 0 linear 300ms;
+	&.active{
+		-webkit-transition: opacity 300ms linear 50ms, z-index 0 linear 0;
+		z-index: 9000;
+		opacity: 1;
+	}
+	.isi_container {
+		-webkit-transform:translate3d(0,0,0);
+		position: absolute;
+		top: 50px;
+		z-index: 1;
+		left: 10px;
+		width: 900px;
+		bottom:40px;
+		overflow-y: auto;
+		#scroller {
+			position: absolute;
+			z-index: 1;
+			// -webkit-touch-callout: none;
+			-webkit-tap-highlight-color: rgba(0,0,0,0);
+			width: 100%;
+			padding: 0;
+
+		}
+	}
+}
+#important_safety_information{
+	position:absolute;
+	top:80px;
+	left:70px;
+	width:936px;
+	height:609.5px;
+	background: url(../img/isi_bg.png) no-repeat;
+	background-size:cover;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}

@@ -1,0 +1,73 @@
+{
+    "hotlink": [
+        {
+            "id": 1,
+            "name": "Home",
+            "class": "menu_top menu_top_home",
+            "slide": [1],
+            "width": "29.5px",
+            "height": "25.5px",
+            "top": "23px",
+            "left": "131px",
+            "show_name": false
+        },
+        {
+            "id": 2,
+            "name": "Summary",
+            "class": "menu_top menu_top_summary",
+            "slide": [2],
+            "width": "29.5px",
+            "height": "25.5px",
+            "top": "23px",
+            "left": "954px",
+            "show_name": false
+
+        },
+        {
+            "id": 103,
+            "name": "pi_link",
+            "class":"prescribing_information_link",
+            "presentation": [2],
+            "slide": [1001],
+            "width": "160px",
+            "height": "40px",
+            "top": "719px",
+            "left": "830px",
+            "show_name": false
+        },
+        {
+            "id": 105,
+            "name": "mg_link",
+            "presentation": [2],
+            "slide": [1002],
+            "width": "40px",
+            "height": "40px",
+            "top": "717px",
+            "left": "255px",
+            "show_name": false
+        },
+        {
+            "id": 106,
+            "name": "pi_link",
+            "class":"prescribing_information_link",
+            "presentation": [2],
+            "slide": [1001],
+            "width": "160px",
+            "height": "29px",
+            "top": "547px",
+            "left": "73px",
+            "show_name": false
+        },
+        {
+            "id": 107,
+            "name": "mg_link",
+            "presentation": [2],
+            "slide": [1002],
+            "width": "105px",
+            "height": "29px",
+            "top": "547px",
+            "left": "297px",
+            "show_name": false
+        }
+    ]
+}

@@ -1,0 +1,76 @@
+<div class="slide_tester">
+	<table class="slide_info"> 
+		<tr>
+			<th>Slide ID</th>
+			<td><%=s.id%></td>
+		</tr>
+		<tr>
+			<th>Package name</th>
+			<td><%=name%>_<%=s.name%>.zip</td>
+		</tr>
+		<tr>
+			<th>Slide description</th>
+			<td><%=s.description%></td>
+		</tr>
+		<%if(typeof(s.keymessage) != "undefined"){ %>
+			<tr>
+				<th>Keymessage id</th>
+				<td><%=s.keymessage[0].id%></td>
+			</tr>
+			<tr>
+				<th>Keymessage Product id</th>
+				<td><%=s.keymessage[0].product_id%></td>
+			</tr>
+			<tr>
+				<th>Display order</th>
+				<td><%=s.keymessage[0].display_order%></td>
+			</tr>
+			<tr>
+				<th>Disabled actions</th>
+				<td><%=s.keymessage[0].disable_Actions_vod%></td>
+			</tr>
+		<%}%>
+		<%if(typeof(pathway) != "undefined"){ %>
+			<%for(var i=0;i<pathway.length;i++){ %>
+				<%for(var j=0;j<pathway[i].slide.length;j++){ %>
+					<%if(pathway[i].slide[j].id==s.id){ %>
+						<tr>
+							<th>Pathway ID</th>
+							<td><%=pathway[i].id%></td>
+						</tr>
+						<tr>
+							<th>Pathway name</th>
+							<td><%=pathway[i].name%></td>
+						</tr>
+						<%if(j!=0){ %>
+							<tr>
+								<th>Previous slide</th>
+								<td><%=pathway[i].slide[j-1].description%></td>
+							</tr>
+						<%}else{%>
+							<tr>
+								<th>Previous slide</th>
+								<td><%=slide[0].description%></td>
+							</tr>
+						<%}%>
+						<%if(j!=(pathway[i].slide.length-1)){ %>
+							<tr>
+								<th>Next slide</th>
+								<td><%=pathway[i].slide[j+1].description%></td>
+							</tr>
+						<%}%>
+					<%}%>
+				<%}%>
+			<%}%>
+		<%}%>
+	</table>
+	<%if(typeof(pathway) != "undefined"){ %>
+		<%if(s.id==1){ %>
+			<ul class="pathway_selector">
+			<%for(var i=0;i<pathway.length;i++){ %>
+				<li><a href="veeva:gotoSlide(<%=name%>_<%=pathway[i].slide[0].name%>.zip)"><%=pathway[i].name%></a></li>
+			<%}%>
+			</ul>
+		<%}%>
+	<%}%>
+</div>

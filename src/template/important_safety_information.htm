@@ -1,0 +1,40 @@
+<%if(typeof(s.popup) != "undefined"){ %>
+        <!-- Has a POPUP -->
+        <%for(var i=0;i<s.popup.length;i++){%>
+                <%if(s.popup[i].template=="important_safety_information"){%>
+                        <!-- spit out the activators -->
+                        <%for(var j=0;j<s.popup[i].buttons.length;j++){%>
+                                <div class="button_for_popup button_for_popup_<%=s.popup[i].name%> button_for_popup_<%=s.popup[i].name%>_<%=j%>" data-class="<%=s.popup[i].name%>" data-popup="#<%=s.popup[i].name%>" <%if(typeof(s.popup[i].pathway_specific)!="undefined"){%>data-pathway-specific="<%=s.popup[i].pathway_specific%>"<%}%> data-grey-background="<%if(typeof(s.popup[i].grey_background) != 'undefined'){%><%=s.popup[i].grey_background%><%}%>"style="<%if(typeof(s.popup[i].pathway_specific)!="undefined"){%>display:none;<%}%><%if(typeof(s.popup[i].buttons[j].background)!="undefined"){%>background-image: url(res/img/<%=s.popup[i].buttons[j].background%>);<%}%>width: <%=s.popup[i].buttons[j].width%>; height: <%=s.popup[i].buttons[j].height%>; top: <%=s.popup[i].buttons[j].top%>; left: <%=s.popup[i].buttons[j].left%>;z-index:2; background-size:cover;"></div>
+                        <%}%>
+                        <!-- spit out all popups -->
+                        <div class="popup <%if(typeof(s.popup[i].class)!="undefined"){%><%=s.popup[i].class%><%}%>" id="<%=s.popup[i].name%>">
+                                <div class="isi_container">
+                                    <div id="scroller">
+                                        <img src="res/img/<%=s.popup[i].background%>" width="878.5px" height="881.5px" />
+                                    </div>
+                                </div>
+                                <%if(typeof(s.popup[i].hotlink)!="undefined"){%>
+                                        <%for(var j=0;j<s.popup[i].hotlink.length;j++){%>
+                                                <div id="hotlink_<%=s.popup[i].hotlink[j].id%>"
+                                                        class="hotlink"
+                                                        <%if(typeof(s.popup[i].hotlink[j].presentation)!="undefined"){%>
+                                                                data-link="<%=s.popup[i].hotlink[j].presentation[0].name%>_<%=s.popup[i].hotlink[j].slide[0].name%>.zip"
+                                                                data-presentation="<%=s.popup[i].hotlink[j].presentation[0].back_external_id%>"
+                                                        <%}else{%>
+                                                                data-link="<%=name%>_<%=s.popup[i].hotlink[j].slide[0].name%>.zip"
+                                                        <%}%>
+                                                        <%if(typeof(s.popup[i].hotlink[j].setpathway) != "undefined"){ %>
+                                                                data-setpathway="<%=s.popup[i].hotlink[j].setpathway%>"
+                                                        <%}%>
+                                                        style="width:<%=s.popup[i].hotlink[j].width%>;height:<%=s.popup[i].hotlink[j].height%>;top:<%=s.popup[i].hotlink[j].top%>;left:<%=s.popup[i].hotlink[j].left%>;position:absolute;z-index:1;">
+                                                <%if(typeof(s.popup[i].hotlink[j].show_name) != "undefined" && s.popup[i].hotlink[j].show_name==true){ %>
+                                                        <%=s.popup[i].hotlink[j].name%>
+                                                <%}%>
+                                                </div>
+                                        <%}%>
+                                <%}%>
+                                <div class="close_btn <%=s.popup[i].close_btn_class%>" style="<%=s.popup[i].close_btn_style%>"></div>
+                        </div>
+                <%}%>
+        <%}%>
+<%}%>

@@ -1,0 +1,12 @@
+<section class="bar_bottom">
+	<div class="small_button ref">&nbsp;</div>
+	<%if(typeof(s.medication_guide) == "undefined" || s.medication_guide.length>0){%>
+		<div class="small_button mg">&nbsp;</div>
+	<%}%>
+	<%if(typeof(s.optin) == "undefined" || s.optin.length>0){%>
+		<div class="small_button oi">&nbsp;</div>
+	<%}%>
+	<%if(typeof(s.repbag) == "undefined" || s.repbag!=true){%>
+		<div class="small_button rb">&nbsp;</div>
+	<%}%>
+</section>

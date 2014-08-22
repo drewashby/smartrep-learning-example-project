@@ -1,0 +1,43 @@
+
+<%if(typeof(s.popup) != "undefined"){ %>
+        <!-- Has a POPUP -->
+        <%for(var i=0;i<s.popup.length;i++){%>
+                <%if(s.popup[i].template=="opt_in"){%>
+                        <!-- spit out the activators -->
+                        <%for(var j=0;j<s.popup[i].buttons.length;j++){%>
+                                <div class="button_for_popup button_for_popup_<%=s.popup[i].name%> button_for_popup_<%=s.popup[i].name%>_<%=j%>" data-class="<%=s.popup[i].name%>" data-popup="#<%=s.popup[i].name%>" <%if(typeof(s.popup[i].pathway_specific)!="undefined"){%>data-pathway-specific="<%=s.popup[i].pathway_specific%>"<%}%> data-grey-background="<%if(typeof(s.popup[i].grey_background) != 'undefined'){%><%=s.popup[i].grey_background%><%}%>"style="<%if(typeof(s.popup[i].pathway_specific)!="undefined"){%>display:none;<%}%><%if(typeof(s.popup[i].buttons[j].background)!="undefined"){%>background-image: url(res/img/<%=s.popup[i].buttons[j].background%>);<%}%>width: <%=s.popup[i].buttons[j].width%>; height: <%=s.popup[i].buttons[j].height%>; top: <%=s.popup[i].buttons[j].top%>; left: <%=s.popup[i].buttons[j].left%>;"></div>
+                        <%}%>
+                        <!-- spit out all popups -->
+                        <div class="popup <%if(typeof(s.popup[i].class)!="undefined"){%><%=s.popup[i].class%><%}%> optin_popup" id="<%=s.popup[i].name%>" style="top: <%=s.popup[i].top%>; left: <%=s.popup[i].left%>; width: 909px; height: 500px; background-image: url(res/img/<%=s.popup[i].background%>);">
+                                <div class="close_btn <%=s.popup[i].close_btn_class%>" style="<%=s.popup[i].close_btn_style%>"></div>
+                                <%if(typeof(s.popup[i].popup)!="undefined"){%>
+                                    <%for(var j=0;j<s.popup[i].popup.length;j++){%>
+                                         <div class="button_for_popup button_for_popup_<%=s.popup[i].popup[j].name%> button_for_popup_<%=s.popup[i].popup[j].name%>_<%=j%>" data-class="<%=s.popup[i].popup[j].name%>" data-popup="#<%=s.popup[i].popup[j].name%>" <%if(typeof(s.popup[i].popup[j].pathway_specific)!="undefined"){%>data-pathway-specific="<%=s.popup[i].popup[j].pathway_specific%>"<%}%> data-grey-background="<%if(typeof(s.popup[i].popup[j].grey_background) != 'undefined'){%><%=s.popup[i].popup[j].grey_background%><%}%>" style="width: 242px;height: 40px;top: 309px;left: 143px;"></div>
+                                    <%}%>
+                                <%}%>
+                                <div class="content">
+                                    <div id="opt_in_form_div">
+                                            <form class="optin">
+                                                    <input type="text" name="email" class="emailField" placeholder="Email Address" disabled="true"/>
+                                                    <button class="emailSubmit">&nbsp;</button>
+                                                    <div class="clear"></div>
+                                            </form>
+                                            <div class='successBox validBox clearfix'>
+                                                <div class="img"></div>
+                                                <div class="text">Thank you for registering. Your request has been successfully submitted!</div>
+                                            </div>
+                                            <div class='errorBox validBox clearfix'>
+                                                <div class="img"></div>
+                                                <div class="text">
+                                                    <span class="incorrect">Your email address is not correct.<br>Please try again.</span>
+                                                    <span class="required">Email address field is required.</span>
+                                                    <span class="connection">There was a connection problem.<br />Please check your Wi-Fi or cellular<br />connection settings and try again.</span>
+                                                    <span class="unlinked">Email addresses can only be<br />submitted when ISA is linked to an<br />HCP account.</span>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                        </div>
+                <%}%>
+        <%}%>
+<%}%>

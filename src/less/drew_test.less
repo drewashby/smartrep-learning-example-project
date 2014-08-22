@@ -1,0 +1,94 @@
+.clear{
+        clear:both;
+}
+.global{
+        width:1024px;
+        height:768px;
+        position:absolute;
+        z-index:995;
+        top:0;
+        left:0;
+        background-image: url('../img/fake_bg.png');
+        background-size: cover;
+        .inner_shadow_top{
+                position:absolute;
+                width:886px;
+                height:10px;
+                top:78px;
+                box-shadow: inset 4px 4px 6px 0px rgba(0, 0, 0, 0.2);
+                left: 34px;
+        }
+        .inner_shadow_left{
+                position: absolute;
+                width: 10px;
+                height: 452px;
+                top: 88px;
+                box-shadow: inset 4px -3px 6px 0px rgba(0, 0, 0, 0.2);
+                left: 34px;
+                .inner_shadow_left_hidebottom{
+                        position: absolute;
+                        width: 10px;
+                        height: 5px;
+                        bottom: 0px;
+                        background: -webkit-linear-gradient(left, #cfcfcf 0%, #ffffff 83%);
+                }
+        }
+        .popup{
+                position:relative;
+                margin:75px auto;
+                z-index:997;
+                .close{
+                        top:-28px;
+                        right:-18px;;
+                        position:absolute;
+                        width:54px;
+                        height:54px;
+                        /*background-image: url('../img/close_btn.png');
+                        background-repeat: no-repeat;*/
+                }
+                &.medication_guide{
+                        width:936px;
+                        height:609.5px;
+                        background-image: url('../img/med_bg.png');
+                        background-size: contain;
+                        .medication_guide_container{
+                                width:894px;
+                                height:552px;
+                                position:relative;
+                                margin:40px 19px 0;
+                                display:inline-block;
+                                background-color:white;
+                                // border:1px solid #dadada;
+                                overflow: hidden;
+                                .scroll_container{
+                                        //box-shadow: inset 3px 3px 6px 1px rgba(0,0,0,0.3);
+                                        .medication_guide_page{
+                                                position:relative;
+                                                background-size: contain;
+                                                width:857px;
+                                        }
+                                }
+                                .medication_guide_scrollbarV {
+                                        opacity: 0;
+                                        position:absolute;
+                                        z-index:100;
+                                        width:5px;
+                                        bottom:7px;
+                                        top:40px;
+                                        right: 22px;
+                                        // background-color: #ffffff;
+                                        border-radius: 4px;
+                                }
+                                .medication_guide_scrollbarV > div {
+                                        border-radius: 6px;
+                                        position:absolute;
+                                        z-index:100;
+                                        width:100%;
+                                        background-color: #898989;
+                                }
+                        }
+                }
+        }
+
+
+}

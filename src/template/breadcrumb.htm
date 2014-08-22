@@ -1,0 +1,25 @@
+<%if(typeof(pathway) != "undefined"){ %>
+<section class="breadcrumb">	
+	<ul>
+		<%for(var i=0;i<pathway.length;i++){ %>				
+			<%for(var j=0;j<pathway[i].slide.length;j++){ %>
+				<%if(pathway[i].slide[j].id==s.id){ %>
+					<%var breadcrumb_slide_pathway_id=pathway[i].id%>
+				<%}%>
+			<%}%>	
+		<%}%>
+		<%for(var i=0;i<pathway.length;i++){ %>		
+			<%if(pathway[i].id==breadcrumb_slide_pathway_id){ %>
+				<%for(var j=0;j<pathway[i].slide.length;j++){ %>
+					<%if(pathway[i].slide[j].id==s.id){ %>
+						<li class="active"></li>
+					<%}else{%>						
+						<li></li>
+					<%}%>
+				<%}%>
+			<%}%>
+		<%}%>		
+	</ul>
+	<div class="clear"></div>	
+</section>
+<%}%>

@@ -1,0 +1,13 @@
+<div class="grey_layer"></div>
+<%if(typeof(js) != "undefined"  && js.length>0){ %>
+	<%for(var i=0;i<js.length;i++){ %>
+		<script src="res/js/<%=js[i]%>.js" type="text/javascript"></script>
+	<%}%>
+<%}%>
+<%if(typeof(s.js) != "undefined"  && js.length>0){ %>
+	<%for(var i=0;i<s.js.length;i++){ %>
+		<script src="res/js/<%=s.js[i]%>.js" type="text/javascript"></script>
+	<%}%>
+<%}%>
+</body>
+</html>					

@@ -1,0 +1,843 @@
+@charset "UTF-8";
+
+section.popup_ft.ft_submitted:not(.popover){	
+	.ft_isi{
+		bottom: -90px;	
+		margin-bottom: 70px;
+	}
+	.ft_result_top .ft_result_left {
+		opacity: 1 !important;
+		margin-left: 10px;
+	}
+	.additional_infos2{
+		display: block;
+		position: absolute;
+		margin-top: 0px;
+	}
+
+
+
+}
+
+section.popup_ft:not(.popover){	
+	font-family: 'Arial';
+	background: #fdfdfd;
+	border: 3px solid #fff;
+	box-shadow: 3px 3px 12px 3px rgba(0, 0, 0, 0.3);
+	height: 644px;
+	left: 56px;
+	padding: 0;
+	position: absolute;
+	top: 49px;
+	width: 909px;
+	border-radius: 6px;
+	.ft_isi{
+		background-size: cover;
+		background-repeat: no-repeat;
+		bottom: -15px;
+		position: relative;
+		width: 817px;
+		height: 181px;
+		left: 13px;
+		background-image: url('../img/ft_isi_colcrys.png');
+
+		body.ulo &{
+			background-image: url('../img/ft_isi_uloric.png');
+			.button_for_popup_important_safety_information{
+				bottom: -127px !important;
+			}
+		}
+		.ft_isi_small{
+			position:absolute;
+			bottom: 0px;
+			font-size: 9px;
+			font-family: 'Avenir-Light';
+		}
+	}	
+	.logo{
+		background-size:cover;
+		background-repeat: no-repeat;
+		position: absolute;
+		width:144px;
+		height:74px;
+		background-image: url('../img/logo_colcrys.png');
+		right: 55px;
+		body.ulo &{
+			background-image: url('../img/logo_uloric.png');
+			height: 89px;
+			width: 137px;
+		}
+		&.colcrys{
+			background-image: url('../img/pi/logo_colcrys.png');
+			height: 74px;
+			top: 47px;
+			left: 705px;
+			width: 144px;
+		}
+		&.uloric{
+			background-image: url('../img/pi/logo_uloric.png');
+			height: 89px;
+			top: 47px;
+			left: 705px;
+			width: 137px;
+		}
+	}
+	.close{
+		background-image: url('../img/bottom_bar_close.png');
+		width:54px;
+		height:54px;
+		right: -25px;
+		top: -25px;
+		z-index: 393939;
+	} 
+	.ft_close{
+		background-image: url('../img/bottom_bar_close.png');
+		background-size:cover;
+		position:absolute;
+		width:54px;
+		height:54px;
+		right: -25px;
+		top: -25px;
+		z-index: 393939;
+	}
+	.content{
+		border-radius: 5px;
+		box-shadow: inset 0 0 8px rgba(0,0,0,0.3);
+		height: 650px;
+		width: 915px;
+		.drug_color{
+			&.colcrys{
+				color: #1c4071;				
+				body.ulo &{
+					color: #009c56;
+				}
+			}
+			&.uloric{
+				color: #009c56;
+			}
+		}
+		.scrollable{
+			padding:38px 32px 38px 32px;
+			.content_loader{
+				background-image: url('../img/ajax_loader.gif');
+				background-repeat: no-repeat;
+				background-size: cover;
+				display: none;
+				height: 48px;
+				left: 356px;
+				width: 48px;
+				position: absolute;
+				top: 250px;
+				&.active{
+					display: block;
+				}
+			}
+			.spacer{
+				height: 60px;
+			}
+		}
+		.ftScrollbarV {
+			opacity: 0;
+			position:absolute;
+			z-index:100;
+			width:11px;
+			bottom:7px;
+			top:34px;
+			right: 12px;
+			&.active{
+				opacity: 1;
+			}
+		}
+		.ftScrollbarV > div {
+			border-radius: 6px;
+			position:absolute;
+			z-index:100;
+			width:100%;
+			background-color: #616161;
+		}
+	}
+	&.active{
+		display:block;
+	}
+	h1{
+		color: #1c4071;
+		font-size: 27px;
+		font-weight: bold;
+		text-transform:capitalize;
+		margin: 0 0 8px 0;
+		font-family: 'Avenir-Heavy';
+		body.ulo &{
+			color: #009c56;
+		}
+	}
+	h2{
+		font-family: 'Arial';
+		color: #414141;
+		font-size: 14px;
+		margin: 115px 0 0 14px;
+		.uppercase{
+			text-transform: uppercase;
+			color: #1c4071;
+			body.ulo &{
+				color: #009c56;
+			}
+			.medical_name{
+				color: #1c4071;
+				text-transform: lowercase;
+				display: inline;
+				body.ulo &{
+					color: #009c56;
+				}
+			}
+		}
+		#natpol{
+			color: #1c4071;
+			body.ulo &{
+				color: #009c56;
+			}
+		}
+		.uloric{
+			color: #009c56;
+		}
+		.colcrys{
+			color: #1c4071;
+		}
+	}
+	.additional_infos{
+		font-family: 'Avenir-Book';
+		font-size: 13px;
+		margin-left: 14px;
+		line-height: 4px;
+		margin-top: 35px;
+		&.additional_infos2{
+			display: none;
+		}
+	}
+
+	div.ft_action1{
+		background-image: url('../img/ft_action1_bg.png');
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 79px;
+		margin: 13px 0 0 13px;
+		padding: 14px 0 0 17px;
+		width: 558px;
+		p{
+			font-size:12px;
+			margin: 0 0 6px 0;
+		}
+		.ft_action1_ctrl{
+			padding: 3px 0 0 0;
+			#ft_zipcode{
+				border: 1px solid transparent;
+				border-radius: 4px;
+				color: #959595;
+				font-size: 13.5px;
+				height: 31px;
+				margin: 0;
+				padding: 5px 10px;
+				text-align: center;
+				width: 115px;
+				display: block;
+				float: left;
+				&.error{
+					border: 1px solid red;
+					&::-webkit-input-placeholder {
+						color: red;
+					}
+				}
+			}
+			button{
+				background-color: transparent;
+				background-repeat: no-repeat;
+				background-size: cover;				
+				border:transparent;
+				float: left;
+				&.btn_submit{
+					background-image: url('../img/ft_submit_btn.png');
+					height:43px;
+					margin: 0 0 0 13px;
+					width:118px;
+				}
+				&.btn_location{
+					background-image: url('../img/ft_location_btn.png');
+					height:42px;
+					margin: 0 0 0 9px;
+					width:201px;					
+				}
+			}
+			label{
+				font-size: 13px;
+				margin-left: 1px;
+				margin-top: -4px;
+				margin-bottom: 7px;
+				display: block;
+				font-family: 'Arial';
+			}
+		}
+	}		
+	.errorBox{
+		color: red;	
+		display: none;			
+		font-size: 12px;
+		left: 67px;
+		position: absolute;
+		top: 317px;
+		width: 538px;
+		div{
+			display: none;
+			&.active{
+				display: block;
+			}
+		}
+		&.active{
+			display: block;
+		}
+	}
+	hr{
+		margin:13px 0 0 0;
+	}
+	.ft_result{
+		//display:none;
+		margin-top: 17px;
+		margin-left: 5px;
+		opacity: 0;
+		-webkit-transition: opacity 500ms linear;		
+		&.active{
+			//display: block;
+			opacity: 0.9999;//to try and eliminate the flashing effect as this loads in.
+		}
+		p{
+			margin: 0;
+			padding-left: 10px;
+			font-size: 14px;
+			font-weight: bold;
+		}
+		ul.ft_action2{
+			color: #ffffff;
+			list-style-type: none;
+			margin: 5px 0 0 -7px;
+			li{
+				background-repeat: no-repeat;
+				background-size: cover;	
+				cursor: pointer;
+				float:left;
+				height: 36.5px;
+				&.ft_cp{
+					background-image: url('../img/ft_cp.png');
+					width: 192.5px;
+					&.active {background-image: url('../img/ft_cp_active.png');}
+				}
+				&.ft_medd{
+					background-image: url('../img/ft_medd.png');
+					width: 191px;					
+					&.active {background-image: url('../img/ft_medd_active.png');}
+				}
+				&.ft_med{
+					background-image: url('../img/ft_med.png');
+					width: 189px;					
+					&.active {background-image: url('../img/ft_med_active.png');}
+				}
+				&.ft_fed{
+					background-image: url('../img/ft_fed.png');
+					width: 187.5px;					
+					&.active {background-image: url('../img/ft_fed_active.png');width: 191px;}
+				}
+			}
+			&.inactive{
+				display: none;
+			}
+		}	
+		.ft_result_top{
+			display: block;
+			.ft_result_left{
+				width: 227px;
+				padding-left:135px;
+				text-align: center;	
+			}
+			.ft_result_right{
+				width: 430px;
+				table{
+					float:left;
+					font-size: 13px;
+					font-weight: bold;
+					text-align: center;
+					margin-top: 10px;
+					width: 100%;
+					tr{
+						line-height: 10px;
+						td{
+							padding-right: 25px;
+						}
+					}
+				}
+				.drugname{
+					color: #1c4071;
+					body.ulo &{
+						color: #009c56;
+					}
+					.medical_name{
+						display: inline-block;
+						text-transform: lowercase;
+					}
+				}				
+			}
+			&.inactive{
+				display: none;
+			}
+		}	
+		.ft_result_bottom{
+			display: block;
+			.ft_result_left{
+				float:left;
+				padding:0 0 0 16px;
+				width: 382px; 
+				overflow: hidden;
+				table{					
+					border-spacing:0;
+					border-collapse:collapse;
+					font-size: 14px;
+					margin-bottom: 30px;
+					position: relative;
+					text-align:center;
+					width:100%;
+					tr{
+						&:nth-child(even){
+							background-color: #fdfdfd;
+						}
+						&:nth-child(odd){
+							background-color: #acacac;
+						}
+						td{
+							height:29px;
+							//overflow: hidden;
+							//white-space:nowrap;
+						}
+					}
+				}				
+			}
+			.ft_result_right{
+				float:left;
+				width: 428px;
+				table{
+					border-spacing:0;
+					border-collapse:collapse;
+					font-size: 14px;
+					margin-bottom: 30px;
+					text-align:center;
+					width:100%;
+					tr{
+						&:nth-child(even){
+							background-color: #fdfdfd;
+						}
+						&:nth-child(odd){
+							background-color: #acacac;
+						}
+						td{
+							height:29px;
+							overflow: hidden;
+							padding-right: 64px;
+							white-space:nowrap;
+						}
+					}
+				}
+				
+			}
+			&.inactive{				
+				display: none;
+			}
+		}
+
+		.ft_result_left{
+			//float:left;
+			//width: 242px;
+			label{		
+				font-size: 11px;
+				font-weight: bold;
+				padding:20px 0 0 2px;
+				float: left;
+				display: block;
+			}
+			.ft_graph{
+				display: none !important;
+				background-image: url('../img/ft_graph.png');
+				background-repeat: no-repeat;
+				background-size: cover;
+				border: 0;
+				height:30px;
+				margin-bottom: -25px;
+				position:relative;
+				left:10px;
+				top: 6px;
+				width:30px; 
+
+			}
+		}
+		.ft_result_right{ 
+			float:left;
+			width: 582px;
+			table{
+				th{
+					font-size: 14px;
+					min-height:32px;
+					max-height:32px;
+					width:191px;
+					.wrapper{
+						height: 32px;						
+					}
+					.ft_result_percentages_add{
+						position:relative;
+						top: 3px;
+					}
+					&:first-child{
+						//color: #0066ff;
+						//font-size: 16px;
+					}						
+				}
+				td{
+					height:15px;
+					//font-size: 12px;
+					text-align: center;
+					&.drug_add{
+						span{
+							display:none;
+							&.active{
+								display:block;
+							}
+						}
+					}
+					&:first-child{
+						//color: #0066ff;
+					}
+				}
+			}
+			
+			.popup_ft_add_drug{
+				//bottom: 325px;
+				display:none;
+				position:absolute;
+				width:200px;
+				z-index:10;
+				ul{
+					background-color: #ffffff;
+					border: 4px solid #bfbfbf;
+					border-radius: 5px;
+					color:#3f3f3f;
+					font-weight: bold;
+					list-style-type: none;
+					margin: 0;
+					padding: 0;
+					li{
+						border-bottom: 1px solid #808080;
+						height:40px;
+						line-height: 38px;
+						text-align: center;
+						&:last-child{
+							border-bottom:none;
+						}
+						&.disabled{
+							color:#bfbfbf;
+						}
+					}
+				}
+				.arrow{
+					width: 0; 
+					height: 0; 
+					border-left: 20px solid transparent;
+					border-right: 20px solid transparent;						
+					border-top: 20px solid #bfbfbf;
+					margin-left: 34px;
+				}
+				&.drug_2{
+					left: 498px;
+				}
+				&.drug_3{
+					left: 689px;						
+				}
+				&.active{
+					display: block;
+				}
+			}
+					
+		}
+		/*
+		.ft_result_data{
+			height: 276px;
+			overflow: hidden;
+			.ft_result_data_left{
+				background-color:red;
+				float:left;
+				width: 242px;				
+			}
+			.ft_result_data_right{
+				background-color:blue;
+				float:left;
+				width: 582px;							
+			}			
+			.scrollbV{
+				bottom:10px;
+				position:absolute;
+				right:7px;
+				top:270px;
+				width:5px;
+				z-index:100;
+				
+			}
+			.scrollbV > div {
+				position:absolute;
+				z-index:100;
+				width:100%;
+				background:#818181;
+				//border:1px solid #800;
+				-webkit-background-clip:padding-box;
+				-webkit-box-sizing:border-box;
+				-webkit-border-radius:4px;
+				//-webkit-box-shadow:inset 1px 1px 0 rgba(255,255,255,0.5);
+			}
+			table.result_data{
+				border-spacing:0;
+				border-collapse:collapse;
+				border-top: 1px solid #bfbfbf;
+				border-left: 1px solid #bfbfbf;
+				border-right: 1px solid #bfbfbf;
+				font-size: 12px;
+				td{
+					height: 15px;
+					overflow:hidden;
+					padding: 10px;
+					width:191px;
+					white-space:nowrap;
+					&.disabled{
+						opacity:0;
+					}					
+				}
+				tr{
+					border-bottom: 1px solid #bfbfbf;
+					&:nth-child(even){
+						background-color: #fefefe;
+					}
+					&:nth-child(odd){
+						background-color: #d8d8d8;
+					}
+				}				
+				&.label{
+					td{
+						width:auto;
+					}
+				}
+			}			
+		}
+		&.active{
+			display:block;
+		}
+		*/
+
+	}
+}
+
+section.popup_ft_graph{
+	display: none;
+	height: 500px;
+	width: 450px;
+	&.active{
+		display: block;
+	}
+
+	.backbtn{
+		background: url(../img/formulary-graph.png);
+		width: 95px;
+		height: 35px;
+		display: block;
+		position: absolute;
+		z-index: 1;
+		background-size:cover;
+	}
+	//GRAPH STUFF
+	.graphContent{
+		position:absolute;
+		.bars{
+			position:absolute;
+			width:100%;
+			>div{
+				position:absolute;
+				width:100%;
+				height:100%;
+				>div{
+					position:absolute;
+					bottom:0;
+					>span{
+						text-align: center;
+						width:100%;
+						position:absolute;
+						top:0;
+					}	
+				}
+				
+
+			}
+		}
+		.labels{
+			position:absolute;
+			width:100%;
+			>div{
+				position:absolute;
+				text-align:center;
+			}
+		}
+
+		&.oneDrug{
+			.bars>div, .labels>div{
+				width:100%;
+			}
+		}
+
+		&.twoDrugs{
+			.bars>div, .labels>div{
+				width:50%;
+				&:nth-child(2){
+					left:50%;
+				}
+			}
+		}
+
+		&.threeDrugs{
+			.bars>div, .labels>div{
+				width:33%;
+				&:nth-child(2){
+					left:33%;
+				}
+				&:nth-child(3){
+					left:66%;
+				}
+			}
+		}
+	}
+}
+
+
+
+.ft_result_top{
+	display: block;
+	.ft_result_left{
+		float:left;
+		opacity: 0;
+		width: 382px;				
+	}
+	.ft_result_right{
+		table{
+			float:left;
+			font-size: 13px;
+			font-weight: bold;
+			text-align: center;
+			margin-top: 10px;
+			width: 100%;
+			tr{
+				line-height: 10px;
+				td{
+					padding-right: 25px;
+					padding-left: 7px;
+				}
+			}			
+		}
+		.medical_name{
+			text-transform: lowercase;	
+			display: inline-block;
+		}			
+	}
+	&.inactive{
+		display: none;
+	}
+}	 
+.ft_result_bottom{
+	display: block;
+	.ft_result_left{
+		float:left;
+		padding:0 0 0 16px;
+		width: 382px;
+		overflow: hidden;
+		table{					
+			border-spacing:0;
+			border-collapse:collapse;
+			font-size: 14px;
+			margin-bottom: 30px;
+			position: relative;
+			text-align:center;
+			width:100%;
+			tr{
+				&:nth-child(even){
+					background-color: #fdfdfd;
+				}
+				&:nth-child(odd){
+					background-color: #acacac;
+				}
+				td{
+					height:29px;
+					//overflow: hidden;
+					//white-space:nowrap;
+				}
+			}
+		}				
+	}
+	.ft_result_right{
+		float:left;
+		width: 428px;
+		table{
+			border-spacing:0;
+			border-collapse:collapse;
+			font-size: 14px;
+			margin-bottom: 30px;
+			text-align:center;
+			width:100%;
+			tr{
+				&:nth-child(even){
+					background-color: #fdfdfd;
+				}
+				&:nth-child(odd){
+					background-color: #acacac;
+				}
+				td{
+					height:29px;
+					overflow: hidden;
+					padding-right: 64px;
+					white-space:nowrap; 
+				}
+			}
+		}
+		
+	}
+	&.inactive{				
+		display: none;
+	}
+}
+
+section.popup_ft_offline {
+	background-image: url('../img/ft_offline.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-color: transparent; 
+	border:none;
+	left: 50px;
+	height: 161px;
+	position: absolute;
+	top: 47px;
+	width: 500px;
+	&.active{
+		background-color:transparent;
+		left: 50px;
+		height: 161px;
+		position: absolute;
+		top: 47px;
+		width: 500px;
+		display:block;
+		.close_btn{
+			background-image: url('../img/bottom_bar_close.png');
+			background-size: contain;
+			width: 54px;
+			height: 54px;
+			right: -15px;
+			top: -20px;
+			position: absolute;
+			z-index: 393939;
+		}
+	}
+}

@@ -1,0 +1,83 @@
+
+<%if(typeof(s.popup) != "undefined"){ %>
+        <!-- Has a POPUP -->
+        <%for(var i=0;i<s.popup.length;i++){%>
+                <%if(s.popup[i].template=="popup"){%>
+
+                        <%if(s.popup[i].name=="references" || s.popup[i].name=="references2" || s.popup[i].name=="references_animated"){%>
+                        <!-- REFERENCES BUTTON -->
+                                <div class="button_for_popup button_for_popup_<%=s.popup[i].name%> button_for_popup_<%=s.popup[i].name%>_<%=j%>" data-class="<%=s.popup[i].name%>" data-popup="#<%=s.popup[i].name%>" <%if(typeof(s.popup[i].pathway_specific)!="undefined"){%>data-pathway-specific="<%=s.popup[i].pathway_specific%>"<%}%> data-grey-background="<%if(typeof(s.popup[i].grey_background) != 'undefined'){%><%=s.popup[i].grey_background%><%}%>" style="background:url('res/img/ref_button.png') no-repeat; background-size:cover; width:40px; height:40px; left:205px;top:719px;z-index:2"></div>
+                        <%}%>
+                        <%if(s.popup[i].name=="study_design"){%>
+                        <!-- STUDY DESIGN BUTTON -->
+                                <div class="button_for_popup button_for_popup_<%=s.popup[i].name%> button_for_popup_<%=s.popup[i].name%>_<%=j%>" data-class="<%=s.popup[i].name%>" data-popup="#<%=s.popup[i].name%>" <%if(typeof(s.popup[i].pathway_specific)!="undefined"){%>data-pathway-specific="<%=s.popup[i].pathway_specific%>"<%}%> data-grey-background="<%if(typeof(s.popup[i].grey_background) != 'undefined'){%><%=s.popup[i].grey_background%><%}%>" style="background:url('res/img/st_button.png') no-repeat; background-size:cover; width:32px; height:35px; left:20px;top:665px;"></div>
+                        <%}%>
+                        <%if(s.popup[i].name=="patient_resources"){%>
+                        <!-- PATIENT RESOURCES BUTTON -->
+                                <div class="button_for_popup button_for_popup_<%=s.popup[i].name%> button_for_popup_<%=s.popup[i].name%>_<%=j%>" data-class="<%=s.popup[i].name%>" data-popup="#<%=s.popup[i].name%>" <%if(typeof(s.popup[i].pathway_specific)!="undefined"){%>data-pathway-specific="<%=s.popup[i].pathway_specific%>"<%}%> data-grey-background="<%if(typeof(s.popup[i].grey_background) != 'undefined'){%><%=s.popup[i].grey_background%><%}%>" style="background:url('res/img/pr_button.png') no-repeat; background-size:cover; width:32px; height:35px; left:20px;top:580px;"></div>
+                        <%}%>
+
+                       <%if(s.popup[i].name=="prescription2" || s.popup[i].name=="prescription"){%>
+                         <!-- PRESCRIPTION BUTTON -->
+                                <div class="button_for_popup button_for_popup_<%=s.popup[i].name%> button_for_popup_<%=s.popup[i].name%>_<%=j%> <%if(typeof(s.popup[i].special_class) != 'undefined'){%><%=s.popup[i].special_class%><%}%>" data-class="<%=s.popup[i].name%>" data-popup="#<%=s.popup[i].name%>" <%if(typeof(s.popup[i].pathway_specific)!="undefined"){%>data-pathway-specific="<%=s.popup[i].pathway_specific%>"<%}%> data-grey-background="<%if(typeof(s.popup[i].grey_background) != 'undefined'){%><%=s.popup[i].grey_background%><%}%>" style="background:url('res/img/rx_button.png') no-repeat; background-size:cover; width:32px; height:35px; left:20px;top:621px;"></div>
+
+                        <%}else{%>
+                        <!-- FLAG BUTTON -->
+                                <%for(var j=0;j<s.popup[i].buttons.length;j++){%>
+                                        <div class="button_for_popup button_for_popup_<%=s.popup[i].name%>  button_for_popup_<%=s.popup[i].name%>_<%=j%>" data-class="<%=s.popup[i].name%>" data-popup="#<%=s.popup[i].name%>" data-hide="<%=s.popup[i].buttons[j].class%>"<%if(typeof(s.popup[i].pathway_specific)!="undefined"){%>data-pathway-specific="<%=s.popup[i].pathway_specific%>"<%}%> data-grey-background="<%if(typeof(s.popup[i].grey_background) != 'undefined'){%><%=s.popup[i].grey_background%><%}%>" style="<%if(typeof(s.popup[i].pathway_specific)!="undefined"){%>display:none;<%}%><%if(typeof(s.popup[i].buttons[j].background)!="undefined"){%>background-image: url(res/img/<%=s.popup[i].buttons[j].background%>);<%}%>width: <%=s.popup[i].buttons[j].width%>; height: <%=s.popup[i].buttons[j].height%>; top: <%=s.popup[i].buttons[j].top%>; left: <%=s.popup[i].buttons[j].left%>;"></div>
+                                <%}%>
+                        <%}%>
+                        <!-- spit out all popups -->
+                        <%if(s.popup[i].multi_background== "multi"){%>
+                            <%for(var r=0;r<s.popup[i].background.length;r++){%>
+                            <div class="popup <%if(typeof(s.popup[i].background[r].class)!="undefined"){%><%=s.popup[i].background[r].class%><%}%>" id="<%=s.popup[i].name%>" style="top: <%=s.popup[i].background[r].top%>; left: <%=s.popup[i].background[r].left%>; width: <%=s.popup[i].background[r].width%>; height: <%=s.popup[i].background[r].height%>; background-image: url(res/img/<%=s.popup[i].background[r].bg%>);">
+                                    <div class="close_btn <%=s.popup[i].background[r].close_btn_class%>" data-close="<%=s.popup[i].background[r].class%>" style="<%=s.popup[i].background[r].close_btn_style%>"></div>
+                            </div>
+                            <%}%>
+                        <%}%>
+                        <%if(s.popup[i].iscroll == "true"){%>
+                        <script type="text/javascript">
+                            var myScroll;
+                            function loaded() {
+                                myScroll = new iScroll('wrapper', {checkDOMChanges: true, hideScrollbar: false} );
+                            }
+                            document.addEventListener('DOMContentLoaded', loaded, false);
+                        </script>
+                        <div  class="popup <%if(typeof(s.popup[i].class)!="undefined"){%><%=s.popup[i].class%><%}%>" id="<%=s.popup[i].name%>" style="position:absolute; width:500px; height:485px; top:60px; left:55px; background:url(res/img/references_big_bg.png); background-size:cover;">
+                            <div id="wrapper">
+                                 <div id="scroller">
+                                    <img src="res/img/<%=s.popup[i].background%>" width="<%=s.popup[i].width%>" height="<%=s.popup[i].height%>" />
+                                </div>
+                            </div>
+                            <div class="close_btn <%=s.popup[i].close_btn_class%>" style="<%=s.popup[i].close_btn_style%>"></div>
+                        </div>
+                        <%}else{%>
+                        <%if(s.popup[i].multi_background!= "multi"){%>
+                        <div class="popup <%if(typeof(s.popup[i].class)!="undefined"){%><%=s.popup[i].class%><%}%> <%if(typeof(s.popup[i].active)!="undefined"){%>active<%}%>" id="<%=s.popup[i].name%>" style="top: <%=s.popup[i].top%>; left: <%=s.popup[i].left%>; width: <%=s.popup[i].width%>; height: <%=s.popup[i].height%>; background-image: url(res/img/<%=s.popup[i].background%>); display:block;">
+                                <div class="close_btn <%=s.popup[i].close_btn_class%>" style="<%=s.popup[i].close_btn_style%>"></div>
+                                <%if(typeof(s.popup[i].hotlink)!="undefined"){%>
+                                        <%for(var j=0;j<s.popup[i].hotlink.length;j++){%>
+                                                <div id="hotlink_<%=s.popup[i].hotlink[j].id%>"
+                                                        class="hotlink"
+                                                        <%if(typeof(s.popup[i].hotlink[j].presentation)!="undefined"){%>
+                                                                data-link="<%=s.popup[i].hotlink[j].presentation[0].name%>_<%=s.popup[i].hotlink[j].slide[0].name%>.zip"
+                                                                data-presentation="<%=s.popup[i].hotlink[j].presentation[0].back_external_id%>"
+                                                        <%}else{%>
+                                                                data-link="<%=name%>_<%=s.popup[i].hotlink[j].slide[0].name%>.zip"
+                                                        <%}%>
+                                                        <%if(typeof(s.popup[i].hotlink[j].setpathway) != "undefined"){ %>
+                                                                data-setpathway="<%=s.popup[i].hotlink[j].setpathway%>"
+                                                        <%}%>
+                                                        style="width:<%=s.popup[i].hotlink[j].width%>;height:<%=s.popup[i].hotlink[j].height%>;top:<%=s.popup[i].hotlink[j].top%>;left:<%=s.popup[i].hotlink[j].left%>;position:absolute;z-index:0;">
+                                                <%if(typeof(s.popup[i].hotlink[j].show_name) != "undefined" && s.popup[i].hotlink[j].show_name==true){ %>
+                                                        <%=s.popup[i].hotlink[j].name%>
+                                                <%}%>
+                                                </div>
+                                        <%}%>
+                                <%}%>
+                        </div>
+                        <%}%>
+                        <%}%>
+                <%}%>
+        <%}%>
+<%}%>

@@ -1,0 +1,36 @@
+{
+    "drew_test": [
+         {
+            "id": 1,
+            "name": "Contrave mg",
+            "height": "6882px",
+            "link": "GLOBAL_MG",
+            "img": [
+                {
+                    "name": "page_1.png",
+                    "height": "1147px"
+                },
+                {
+                    "name": "page_2.png",
+                    "height": "1147px"
+                },
+                {
+                    "name": "page_3.png",
+                    "height": "1147px"
+                },
+                {
+                    "name": "page_4.png",
+                    "height": "1147px"
+                },
+                {
+                    "name": "page_5.png",
+                    "height": "1147px"
+                },
+                {
+                    "name": "page_6.png",
+                    "height": "1147px"
+                }
+            ]
+        }
+    ]
+}

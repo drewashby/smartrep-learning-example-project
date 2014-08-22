@@ -1,0 +1,189 @@
+
+
+.devmode{
+	background-color: #838383;
+	border-radius: 5px;
+	display: block;
+	font-family: Arial;
+	font-weight: 200;
+	left:0;
+	height: 600px;
+	overflow: hidden;
+	padding:5px;
+	position:absolute;
+	margin: 84px 112px;
+	top:0;
+	width: 800px;
+	z-index:99999999999999999999999;
+	&.minimized{
+		height:17px;
+	}
+	h1{
+		color:#c1c1c1;
+		font-size: 14px;
+		position:relative;
+		padding: 0;
+		margin: 0 0 4px 0;
+		span{
+			color:darken(#c1c1c1, 10%);
+		}		
+	}
+	button{
+		box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+		color: #ffffff;
+		display: inline-block;
+		padding: 0 8.6px;
+		margin: 2px 2px 4px 0;
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 1.5;
+		text-align: center;
+		white-space: nowrap;
+		vertical-align: middle;
+		cursor: pointer;
+		border: 1px solid transparent;
+		border-radius: 4px;		
+		&.inactive{
+			background-color: #a5a5a5 !important;
+			border-color: #7d7d7d !important;
+			opacity: 1;	
+		}
+		&.consolectrl{
+			background-color: #3a3c3c;
+			border-color: #2e2f2f;
+			margin-top: 7px;			
+		}		
+		&.error{
+			background-color: #d43f3a;
+			border-color: #c9302c;			
+		}		
+		&.localstorage{
+			background-color: #357ebd;
+			border-color: #3071a9;
+		}
+		&.console_log{
+			background-color: #4cae4c;
+			border-color: #449d44;
+		}
+		&.console_info{
+			background-color: #357ebd;
+			border-color: #3071a9;
+		}
+		&.console_debug{
+			background-color: #eea236;
+			border-color: #ec971f;
+		}
+		&.console_error{
+			background-color: #d43f3a;
+			border-color: #c9302c;
+		}
+		&.ajax_error{
+			background-color: #d43f3a;
+			border-color: #c9302c;	
+		}
+		&.ajax_success{
+			background-color: #7b36ee;
+			border-color: #6c1fec;
+		}
+	}
+	.scroll{
+		border-radius: 10px;
+		height: 521px;
+		width: 785px;
+		overflow-y: scroll;
+		.devmode_console_scrollV{
+			bottom:35px;
+			position:absolute;
+			right:9px;
+			top:54px;
+			width:5px;
+			z-index:100;
+
+		}
+		.devmode_console_scrollV > div {
+			position:absolute;
+			z-index:100;
+			width:100%;
+			background:#BBB9B9;
+			-webkit-background-clip:padding-box;
+			-webkit-box-sizing:border-box;
+			-webkit-border-radius:4px;
+		}
+	}
+	.console{
+		font-size: 12px;
+		position:relative;
+		width: 785px;
+		min-height: 521px;
+		.msg{			
+			border-bottom-width:1px;
+			border-bottom-style: solid;
+			border-bottom-color: inherit;
+			border-radius: 5px;
+			margin: 0 0 2px 0;
+			padding:5px;
+			overflow: hidden;
+			position:relative;
+			box-shadow: inset 0 0 1px 0px rgba(0,0,0,0.1);
+			width:775px;			
+			&.inactive{
+				display: none;	
+			}	
+			&.error{
+				background-color: #f2dede;
+				border-color: #eed3d7;
+				color: #b94a48;				
+			}		
+			&.localstorage{
+				color: #3a87ad;
+				background-color: #d9edf7;
+				border-color: #bce8f1;
+			}
+			&.console_log{
+				color: #468847;
+				background-color: #dff0d8;
+				border-color: #d6e9c6;
+			}
+			&.console_error{
+				background-color: #f2dede;
+				border-color: #eed3d7;
+				color: #b94a48;
+			}
+			&.console_debug{
+				color: #c09853;
+				background-color: #fcf8e3;
+				border-color: #fbeed5;
+			}
+			&.console_info{
+				color: #3a87ad;
+				background-color: #d9edf7;
+				border-color: #bce8f1;
+			}
+			&.ajax_error{
+				background-color: #f2dede;
+				border-color: #eed3d7;
+				color: #b94a48;
+			}
+			&.ajax_success{
+				color: #7c53c0;
+				background-color: #ece3fc;
+				border-color: #e3d5fb;
+			}	
+			h1{				
+				border-bottom-width:1px;
+				border-bottom-style: dashed;
+				border-bottom-color: inherit;
+				color: inherit;
+				font-size: 13px;
+				position:relative;
+				text-shadow: 1px 1px #ffffff;				
+				width: 100%;	
+			}
+			span{				
+				font-style: italic;
+				font-weight: bold;
+			}		
+		}
+	}
+
+}

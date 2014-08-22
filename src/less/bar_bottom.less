@@ -1,0 +1,112 @@
+section.bar_bottom{
+	background-image: url(../img/bottom_bar_background.png);
+	background-size: cover;
+	bottom:0;
+	height:60px;
+	left: 0;
+	position:absolute;
+	width:1024px;
+	z-index: 1;
+	.small_button{
+		width:41px;
+		height: 40px;
+		background-size: cover;
+		background-position: 0 0;
+		background-repeat: no-repeat;
+		position:absolute;
+		&.ft{
+			background-image: url(../img/ft_button.png);
+			left: 210px;
+			bottom:10px;
+			background-position: 0px -80px;
+			&.active{
+				background-position: 0px -40px;
+			}
+		}
+		&.ref{
+			background-image: url(../img/ref_button.png);
+			left: 205px;
+			bottom:10px;
+			background-position: 0px -80px;
+			&.active{
+				background-position: 0px -40px;
+			}
+		}
+		&.mg{
+			background-image: url(../img/mg_button.png);
+			left: 255px;
+			bottom:10px;
+			background-position: 0px 0px;
+			&.active{
+				background-position: 0px -40px;
+			}
+
+		}
+		&.oi{
+			background-image: url(../img/oi_button.png);
+			left: 303px;
+			bottom:10px;
+			background-position: 0px -80px;
+		}
+		&.rb{
+			background-image: url(../img/rb_button.png);
+			left: 351px;
+			bottom:10px;
+			background-position: 0px -80px;
+		}
+		&.mc{
+			background-image: url(../img/mc_off.png);
+			left: 453px;
+			bottom:10px;
+		}
+	}
+}
+section.bar_left{
+	width:60px;
+	height:125px;
+	position:absolute;
+	bottom:70px;
+	left:10px;
+	z-index:1;
+	button{
+		display:block;
+		border:none;
+		width:32px;
+		height: 33px;
+		background-size: cover;
+		background-position: 0 0;
+		background-repeat: no-repeat;
+		background-color:transparent;
+		position:absolute;
+		&.pr{
+			left: 10px;
+			top:5px;
+			&.disabled{
+				background-image: url(../img/pr_button.png);
+				background-position:0 0px;
+			}
+		}
+		&.rx{
+			left: 10px;
+			top:50px;
+			&.disabled{
+				background-image: url(../img/rx_button.png);
+				background-position:0 0px;
+			}
+		}
+		&.st{
+			left: 10px;
+			top:95px;
+			&.disabled{
+				background-image: url(../img/st_button.png);
+				background-position:0 0;
+			}
+		}
+	}
+}
+.prescribing_information_link {
+	background-image: url(../img/pi_button.png);
+	background-size:cover;
+	background-position: 0px 0px;
+
+}

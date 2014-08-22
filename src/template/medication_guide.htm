@@ -1,0 +1,15 @@
+<div class="global">
+    <section class="popup medication_guide active">
+            <div class="medication_guide_container">
+                    <div class="scroll_container">
+                            <%for(var i=0; i< s.medication_guide.length; i++){ %>                        
+                                    <%for(var j=0; j< s.medication_guide[i].img.length; j++){ %>
+                                            <div class="medication_guide_page" style="height:<%=s.medication_guide[i].img[j].height%>;background: url('res/img/<%=s.medication_guide[i].img[j].name%>') no-repeat; background-size:cover;"></div>
+                                    <%}%> 
+                            <%}%> 
+                    </div>                        
+            </div> 
+            <div class="close"></div>
+    </section>
+    <div class="grey_layer"></div>
+</div>

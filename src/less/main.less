@@ -1,0 +1,89 @@
+.clear{
+	clear: both;
+}
+
+#hidekeyboard{
+	opacity:0;
+	z-index: -999999999999;
+}
+.uppercase{
+	text-transform: uppercase;
+}
+
+html *:not(input) {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-user-select: none;
+    -webkit-touch-callout:none;
+}
+
+
+body, html{
+	height:768px;
+	overflow:hidden;
+	width: 1024px;
+	position:absolute;
+	top:0;
+	left:0;
+	margin:0;
+	// background-image:url('../img/slide_bg.png');
+	// background-size:cover;
+	.top_menu{
+		height:62.5px;
+		width: 1024px;
+		background: url('../img/top_menu_bg.png') no-repeat;
+		background-size:cover;
+		position:absolute;
+		top:0;
+		left:0;
+		z-index:1;
+		background-position: 0 0;
+	}
+	.menu_top_home{
+		background: url('../img/home_btn.png') no-repeat;
+		background-size:cover;
+	}
+	.menu_top_summary{
+		background: url('../img/menu_top_summary.png') no-repeat;
+		background-size:cover;
+	}
+	.main_content{
+		background: url('../img/slide_bg.png') no-repeat;
+		width:1024px;
+		height:768px;
+		position:absolute;
+		top:0;
+		left:0;
+		background-size:cover;
+	}
+	.isi_footer_btn{
+		background-image: url(../img/isi_button.png);
+		position:absolute;
+		left: 716px;
+		bottom:10px;
+		width: 189px;
+		height: 40px;
+		background-size:cover;
+	}
+	.grey_layer{
+		position:absolute;
+		background-color:rgba(0,0,0,0.5);
+		left:0;
+		right:0;
+		width:1024px;
+		height:662px;
+		top:52px;
+		z-index:-99999;
+		opacity:0;
+		-webkit-transition: opacity 300ms linear 50ms, z-index 0 linear 300ms;
+		&.full{
+			-webkit-transition: opacity 300ms linear 50ms, z-index 0 linear 0;
+			height:768px;
+			top:0;
+		}
+		&.active{
+			-webkit-transition: opacity 300ms linear 50ms, z-index 0 linear 0;
+			z-index:996;
+			opacity: 1;
+		}
+	}
+}

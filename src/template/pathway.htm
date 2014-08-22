@@ -1,0 +1,22 @@
+<%if(typeof(pathway) != "undefined"){ %>
+	<div class="pathway">
+		<%for(var i=0;i<pathway.length;i++){ %>				
+			<%for(var j=0;j<pathway[i].slide.length;j++){ %>						
+				<%if(pathway[i].slide[j].id==s.id){ %>					
+					<input id="pathway_current_id" value="<%=pathway[i].id%>" type="hidden"/>				
+					<%if(j!=0){ %>
+						<input id="pathway_previous_slide_id" value="<%=pathway[i].slide[j-1].id%>" type="hidden"/>
+						<input id="pathway_previous_slide_name" value="<%=pathway[i].slide[j-1].name%>" type="hidden"/>												
+					<%}else{%>					
+						<input id="pathway_previous_slide_id" value="<%=slide[0].id%>" type="hidden"/>
+						<input id="pathway_previous_slide_name" value="<%=slide[0].name%>" type="hidden"/>
+					<%}%>
+					<%if(j!=(pathway[i].slide.length-1)){ %>
+						<input id="pathway_next_slide_id" value="<%=pathway[i].slide[j+1].id%>" type="hidden"/>
+						<input id="pathway_next_slide_name" value="<%=pathway[i].slide[j+1].name%>" type="hidden"/>													
+					<%}%>
+				<%}%>
+			<%}%>
+		<%}%>
+	</div>
+<%}%>
